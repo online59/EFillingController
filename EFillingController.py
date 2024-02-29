@@ -290,34 +290,73 @@ def navigate_to_pdf_page(driver):
     retry_function(driver.get, 'https://efiling.rd.go.th/rd-efiling-web/form-status')
 
 def open_filter_panel(driver):
-    logging.info("Opening filter panel...")
-    try:
-        filter_button = find_element_with_retry(driver, (By.XPATH, "//div[@class='collapsed' and @aria-expanded='true']"))
-        click_element_with_retry(driver, filter_button)
-    except Exception as e:
-        logging.error(f"Failed to open filter panel: {e}")
+
+    attemps = 0
+    while attemps < MAX_ATTEMPTS:
+
+        logging.info(f"Opening filter panel, attempt {attemps + 1}...")
+        try:
+            filter_button = find_element_with_retry(driver, (By.XPATH, "//div[@class='collapsed' and @aria-expanded='true']"))
+        except Exception as e:
+            logging.error(f"Failed to find open filter panel button: {e}")
+            attemps += 1
+            continue
+
+        try:
+            click_element_with_retry(driver, filter_button)
+        except Exception as e:
+            logging.error(f"Failed to click filter button: {e}")
+            attemps += 1
+            continue
 
 def select_dropdown_item(driver, form, select_item):
-    logging.info(f"Selecting '{select_item}' from dropdown menu...")
-    try:
-        dropdown_button = find_element_with_retry(driver, (By.CSS_SELECTOR, f"ng-select[formcontrolname='{form}']"))
-        click_element_with_retry(driver, dropdown_button)
-    except Exception as e:
-        logging.error(f"Failed to open dropdown menu: {e}")
+    
+    attempts = 0
+    while attempts < MAX_ATTEMPTS:
 
-    try:
-        select_item_button = find_element_with_retry(driver, (By.XPATH, f"//span[@class='ng-option-label ng-star-inserted' and contains(text(), '{select_item}')]"))
-        click_element_with_retry(driver, select_item_button)
-    except Exception as e:
-        logging.error(f"Failed to select item from dropdown: {e}")
+        logging.info(f"Selecting '{select_item}' from dropdown menu, attempt {attempts + 1}...")
+
+        try:
+            dropdown_button = find_element_with_retry(driver, (By.CSS_SELECTOR, f"ng-select[formcontrolname='{form}']"))
+            click_element_with_retry(driver, dropdown_button)
+        except Exception as e:
+            logging.error(f"Failed to open dropdown menu: {e}")
+            attempts += 1
+            continue
+
+        try:
+            select_item_button = find_element_with_retry(driver, (By.XPATH, f"//span[@class='ng-option-label ng-star-inserted' and contains(text(), '{select_item}')]"))
+        except Exception as e:
+            logging.error(f"Failed to find selected item from dropdown: {e}")
+            attempts += 1
+            continue
+
+        try:
+            click_element_with_retry(driver, select_item_button)
+        except Exception as e:
+            logging.error(f"Failed to click dropdown item: {e}")
+            attempts += 1
+            continue
 
 def input_item(driver, form, input_item):
-    logging.info(f"Inputting '{input_item}' into form...")
-    try:
-        input_element = find_element_with_retry(driver, (By.XPATH, f"//input[@formcontrolname='{form}']"))
-        input_element.send_keys(input_item)
-    except Exception as e:
-        logging.error(f"Failed to input item: {e}")
+
+    attemp = 0
+    while attemp < MAX_ATTEMPTS:
+
+        logging.info(f"Inputting '{input_item}' into form, attempt {attemp + 1}...")
+        try:
+            input_element = find_element_with_retry(driver, (By.XPATH, f"//input[@formcontrolname='{form}']"))
+        except Exception as e:
+            logging.error(f"Failed to find input field: {e}")
+            attemp += 1
+            continue
+
+        try:
+            input_element.send_keys(input_item)
+        except Exception as e:
+            logging.error(f"Failed to input item: {e}")
+            attemp += 1
+            continue
 
 def fill_form(driver, filter_form):
     logging.info("Filling filter form...")
@@ -518,21 +557,34 @@ def get_file_name(driver, filter_form, username, download_directory):
 
         # Check if the URL is a TAX_FORM or RECEIPT
         if "RECEIPT" in url_extr:
+
             base_filename = f"RECEIPT_{tax_month}-{tax_year} {username}.pdf"
             logging.info(f"Base filename: {base_filename}")
-        else:
 
-            if tax_name == "" or tax_name is None:
-                try:
-                    # Extracting tax_name from url_extr
-                    tax_name_index = url_extr.index("TAX_FORM_") + len("TAX_FORM_")
-                    tax_name = convert_system_tax_form_to_eng(url_extr[tax_name_index:tax_name_index + 3])
-                    logging.info(f"Extracted tax_name from URL: {tax_name}")
-                except ValueError:
-                    logging.warning("Cannot extract tax_name from URL")
+        elif tax_name == "" or tax_name is None:
+
+            try:
+                # Extracting tax_name from url_extr
+                tax_name_index = url_extr.index("TAX_FORM_") + len("TAX_FORM_")
+                tax_name = convert_system_tax_form_to_eng(url_extr[tax_name_index:tax_name_index + 3])
+                logging.info(f"Extracted tax_name from URL: {tax_name}")
+            except ValueError:
+                tax_name = "UNKNOWN"
+                logging.warning("Cannot extract tax_name from URL")
+
 
             base_filename = f"{tax_name} {tax_month}-{tax_year} {username}.pdf"
             logging.info(f"Base filename: {base_filename}")
+
+        elif tax_name == "" or tax_name is None and "RECEIPT" not in url_extr:
+
+            base_filename = f"UNKNOWN_{tax_month}-{tax_year} {username}.pdf"
+            logging.info(f"Base filename: {base_filename}")
+
+        else:
+            base_filename = f"{tax_name} {tax_month}-{tax_year} {username}.pdf"
+            logging.info(f"Base filename: {base_filename}")
+
 
         # Check if the base filename already exists
         if os.path.exists(os.path.join(download_directory, base_filename)):
@@ -677,7 +729,6 @@ def find_and_download_pdf(driver, filter_form, username, download_directory):
         except Exception as e:
             logging.error("Failed to click on dropdown menu", e)
             attempts += 1
-            last_clicked_index -= 1
             continue
         
         try:
@@ -685,7 +736,6 @@ def find_and_download_pdf(driver, filter_form, username, download_directory):
         except Exception as e:
             logging.error("Failed to find dropdown item: %s", e)
             attempts += 1
-            last_clicked_index -= 1
             continue
 
         try:
@@ -693,7 +743,6 @@ def find_and_download_pdf(driver, filter_form, username, download_directory):
         except Exception as e:
             logging.error("Failed to click on dropdown item", e)
             attempts += 1
-            last_clicked_index -= 1
             continue
 
         try:
@@ -701,7 +750,6 @@ def find_and_download_pdf(driver, filter_form, username, download_directory):
         except Exception as e:
             logging.error("Failed to find download buttons: %s", e)
             attempts += 1
-            last_clicked_index -= 1
             continue
 
         max_button = len(download_buttons)
