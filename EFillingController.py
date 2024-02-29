@@ -1,6 +1,7 @@
 import logging
 import os
 import time
+import datetime
 import urllib.request
 from logging.handlers import RotatingFileHandler
 from selenium import webdriver
@@ -159,6 +160,39 @@ def click_element_with_retry(driver, element, fallback_locator=None, index=0):
             move_element_to_viewport(driver, element)
             continue  # Retry finding elements
     raise RuntimeError(f"Failed to click element after {MAX_ATTEMPTS} attempts")
+
+
+def press_esc(driver):
+    """
+    Press the ESC key using Selenium.
+
+    Args:
+        driver: Selenium WebDriver instance.
+
+    Returns:
+        None
+    """
+    actions = ActionChains(driver)
+    actions.send_keys(Keys.ESCAPE).perform()
+
+def press_esc_with_retry(driver):
+    """
+    Press the ESC key using Selenium with a retry mechanism.
+
+    Args:
+        driver: Selenium WebDriver instance.
+
+    Returns:
+        None
+    """
+    for _ in range(MAX_ATTEMPTS):  # Retry up to 3 times
+        try:
+            press_esc(driver)
+            return
+        except Exception as e:
+            logging.warning(f"Failed to press ESC key: {e}, retrying...")
+    logging.error("Failed to press ESC key after multiple attempts")
+
 
 def is_element_in_viewport(driver, element):
     """
@@ -375,6 +409,9 @@ def convert_thai_tax_form_to_eng(tax_form):
         "แบบแจ้งเงินได้ต่างด้าว": "FORIEGNINCOME",
     }
 
+    if tax_form == None or tax_form == "":
+        return ""
+
     # Check if the provided tax_form is in the list of prohibited names
     if tax_form in thai_to_eng_tax_form:
         logging.info("Converting Thai's tax form into Eng")
@@ -382,6 +419,71 @@ def convert_thai_tax_form_to_eng(tax_form):
     else:
         logging.info("Tax form not found in the list")
         return tax_form
+
+def convert_system_tax_form_to_eng(tax_form):
+    """Convert Thai tax form abbreviation to English."""
+    logging.info("Converting Thai's tax form into Eng")
+    thai_to_eng_tax_form = {
+        "P01": "PND1",
+        "P02": "PND2",
+        "P03": "PND3",
+        "P50": "PND50",
+        "P51": "PND51",
+        "P52": "PND52",
+        "P53": "PND53",
+        "P54": "PND54",
+        "P55": "PND55",
+        "P90": "PND90",
+        "P91": "PND91",
+        "P93": "PND93",
+        "P94": "PND94",
+        "P96": "PND96",
+        "P97": "PND97",
+        "P98": "PND98",
+        "P99": "PND99",
+        "P1A": "PND1A",
+        "P2A": "PND2A",
+        "P3A": "PND3A",
+        "P53A": "PND53A",
+        "P90A": "PND90A",
+        "P91A": "PND91A",
+        "P91E": "PND91E",
+        "P93A": "PND93A",
+        "P94A": "PND94A",
+        "P96A": "PND96A",
+        "P97A": "PND97A",
+        "P98A": "PND98A",
+        "P99A": "PND99A",
+        "P30": "PP30",
+        "P36": "PP36",
+        "P40": "PT40",
+    }
+    
+    # Check if the provided tax_form is in the list of prohibited names
+    if tax_form in thai_to_eng_tax_form:
+        logging.info("Converting Thai's tax form into Eng")
+        return thai_to_eng_tax_form[tax_form]
+    else:
+        logging.info("Tax form not found in the list")
+        return "TAX_FORM"
+
+def convert_thai_year_to_eng(tax_year):
+    """
+    Convert Thai year to English year.
+
+    Args:
+        tax_year (str): Thai year in the format "2567".
+
+    Returns:
+        str: English year in the format "2024".
+    """
+    logging.info("Converting Thai year to English year")
+
+    if (tax_year is None) or (tax_year == ""):
+        return "YEAR"
+
+    eng_year = int(tax_year) - 543
+    return str(eng_year)
 
 def get_file_name(driver, filter_form, username, download_directory):
     """
@@ -404,7 +506,7 @@ def get_file_name(driver, filter_form, username, download_directory):
 
         # Convert variables to strings before joining
         tax_name = str(convert_thai_tax_form_to_eng(tax_name))
-        tax_year = str(tax_year)
+        tax_year = str(convert_thai_year_to_eng(tax_year))
         tax_month = str(convert_thai_month_to_eng(tax_month)).upper()
 
         try:
@@ -419,6 +521,16 @@ def get_file_name(driver, filter_form, username, download_directory):
             base_filename = f"RECEIPT_{tax_month}-{tax_year} {username}.pdf"
             logging.info(f"Base filename: {base_filename}")
         else:
+
+            if tax_name == "" or tax_name is None:
+                try:
+                    # Extracting tax_name from url_extr
+                    tax_name_index = url_extr.index("TAX_FORM_") + len("TAX_FORM_")
+                    tax_name = convert_system_tax_form_to_eng(url_extr[tax_name_index:tax_name_index + 3])
+                    logging.info(f"Extracted tax_name from URL: {tax_name}")
+                except ValueError:
+                    logging.warning("Cannot extract tax_name from URL")
+
             base_filename = f"{tax_name} {tax_month}-{tax_year} {username}.pdf"
             logging.info(f"Base filename: {base_filename}")
 
@@ -528,6 +640,7 @@ def find_and_download_pdf(driver, filter_form, username, download_directory):
     tax_month = filter_form[2]['item']
 
     tax_month = str(convert_thai_month_to_eng(tax_month))
+    tax_year = str(convert_thai_year_to_eng(tax_year))
 
     try:
         logging.info("Formatting destination path")
@@ -545,14 +658,16 @@ def find_and_download_pdf(driver, filter_form, username, download_directory):
         logging.error("Error joining destination folder: %s", e)  # Print specific error message
 
     last_clicked_index = 0
+    attempts = 0
             
-    while True:
-        
+    while attempts < MAX_ATTEMPTS:
+
         try:
             button_elements = find_all_elements_with_retry(driver, (By.XPATH, '//button[@aria-controls="dropdown-basic" and @id="button-basic"]'))
         except Exception as e:
             logging.error("Failed to find dropdown button: %s", e)
-            break
+            attempts += 1
+            continue
 
         if last_clicked_index + 1 > len(button_elements):
             break
@@ -561,32 +676,50 @@ def find_and_download_pdf(driver, filter_form, username, download_directory):
             click_element_with_retry(driver, button_elements[last_clicked_index], fallback_locator=(By.XPATH, '//button[@aria-controls="dropdown-basic" and @id="button-basic"]'), index=last_clicked_index)
         except Exception as e:
             logging.error("Failed to click on dropdown menu", e)
-            break
+            attempts += 1
+            last_clicked_index -= 1
+            continue
         
         try:
             dropdown_menu = find_clickable_with_retry(driver, (By.XPATH, '//a[@class="dropdown-item" and contains(text(), "พิมพ์ภาพแบบ/ภาพใบเสร็จ")]'))
         except Exception as e:
             logging.error("Failed to find dropdown item: %s", e)
-            break
+            attempts += 1
+            last_clicked_index -= 1
+            continue
 
         try:
             click_element_with_retry(driver, dropdown_menu)
         except Exception as e:
             logging.error("Failed to click on dropdown item", e)
-            break
+            attempts += 1
+            last_clicked_index -= 1
+            continue
 
         try:
             download_buttons = find_all_elements_with_retry(driver, (By.XPATH, '//button[contains(text(), "ดาวน์โหลด")]'))
         except Exception as e:
             logging.error("Failed to find download buttons: %s", e)
-            break
+            attempts += 1
+            last_clicked_index -= 1
+            continue
 
-        for download_button in download_buttons:
+        max_button = len(download_buttons)
+        button_counter = 0
+        click_button_attempts = 0
+
+        while button_counter < max_button:
+
+            if click_button_attempts > MAX_ATTEMPTS:
+                break
+
+            download_button = download_buttons[button_counter]
 
             try:
                 click_element_with_retry(driver, download_button)
             except Exception as e:
                 logging.error("Failed to click on download button", e)
+                click_button_attempts += 1
                 continue
 
             try:
@@ -595,6 +728,7 @@ def find_and_download_pdf(driver, filter_form, username, download_directory):
                 driver.switch_to.window(tabs[-1])
             except Exception as e:
                 logging.error("Error switching to new tab: %s", e)
+                click_button_attempts += 1
                 continue
                 
             try:
@@ -603,37 +737,57 @@ def find_and_download_pdf(driver, filter_form, username, download_directory):
                 logging.info(f"Filename joined successfully: {filename}")
             except Exception as e:
                 logging.error("Error joining destination to filename: %s", e)
+                click_button_attempts += 1
+                continue
             
             try:
                 download_pdf(driver, final_directory, filename=filename)
             except Exception as e:
                 logging.error("Error downloading PDF: %s", e)
+                click_button_attempts += 1
                 driver.close() # Close the tab
-                return
+                continue
 
             try:
                 driver.close()
             except Exception as e:
                 logging.error("Error closing tab: %s", e)
-                return
+                click_button_attempts += 1
+                continue
 
             try:
                 driver.switch_to.window(tabs[0])
             except Exception as e:
                 logging.error("Error switching to original tab: %s", e)
-                return
+                click_button_attempts += 1
+                continue
+            
+            button_counter += 1
 
         try:
             close_button = find_clickable_with_retry(driver, (By.XPATH, '//button[contains(@class, "btn button-box button-box-close-modal") and contains(text(), "ปิด")]'))
         except Exception as e:
             logging.error("Failed to find close button: %s", e)
-            return
+            
+            logging.info("Trying to press ESC key")
+            try:
+                press_esc_with_retry(driver)
+            except Exception as e:
+                logging.error("Failed to press ESC key: %s", e)
+                return
+
 
         try:
             click_element_with_retry(driver, close_button)
         except Exception as e:
             logging.error("Failed to click on close button")
-            return
+            
+            logging.info("Trying to press ESC key")
+            try:
+                press_esc_with_retry(driver)
+            except Exception as e:
+                logging.error("Failed to press ESC key: %s", e)
+                return
 
         logging.info(f"Current button click counting: {last_clicked_index}")
 
@@ -698,16 +852,19 @@ def main():
 
     options = read_filter_options_from_excel("options.xlsx")
 
-    DEFAULT_DOWNLOAD_DIRECTORY = "C:/Users/Se_sA/Downloads/EFillingController"
+    user_download_folder = os.path.join(os.path.expanduser('~'), 'Downloads').replace('\\', '/')
+
+    DEFAULT_DOWNLOAD_DIRECTORY = f"{user_download_folder}/EFillingController"
 
     login_url = "https://efiling.rd.go.th/rd-efiling-web/login"
 
+    selectYear = options[0]['tax_year']
     selectMonth = options[0]['tax_month']
 
     filter_form = [
         {'form': 'taxForm', 'item': options[0]['tax_form'], 'type': 'dropdown'},
         {'form': 'taxYear', 'item': options[0]['tax_year'], 'type': 'dropdown'},
-        {'form': 'taxMonth', 'item': selectMonth, 'type': 'dropdown'},
+        {'form': 'taxMonth', 'item': options[0]['tax_month'], 'type': 'dropdown'},
         {'form': 'nid', 'item': options[0]['tax_id'], 'type': 'input'},
         {'form': 'fullName', 'item': options[0]['tax_company'], 'type': 'input'},
         {'form': 'refNo', 'item': options[0]['tax_ref'], 'type': 'input'},
@@ -716,7 +873,24 @@ def main():
 
     for account in accounts:
 
-        if selectMonth == None or selectMonth == "":
+        if selectYear == None or selectYear == "":
+
+            current_year = datetime.datetime.now().year + 543
+
+            for year in range(current_year - 2, current_year - 1, current_year):
+                filter_form[1]['item'] = str(year)
+                login_and_download_all_pdfs(account['username'], account['password'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
+
+                if selectMonth == None or selectMonth == "":
+
+                    for month in ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]:
+                        filter_form[2]['item'] = month
+                        login_and_download_all_pdfs(account['username'], account['password'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
+
+                else:
+                    login_and_download_all_pdfs(account['username'], account['password'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
+        
+        elif selectMonth == None or selectMonth == "":
 
             for month in ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]:
                 filter_form[2]['item'] = month
