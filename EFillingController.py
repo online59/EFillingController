@@ -28,7 +28,8 @@ def read_credentials_from_excel(file_path):
     for index, row in df.iterrows():
         username = row['username']
         password = row['password']
-        credentials.append({'username': username, 'password': password, 'row': index + 1})
+        company_name = row['company_name']
+        credentials.append({'username': username, 'password': password, 'company_name': company_name, 'row': index + 1})
     return credentials
 
 def read_filter_options_from_excel(file_path):
@@ -304,6 +305,8 @@ def open_filter_panel(driver):
 
         try:
             click_element_with_retry(driver, filter_button)
+            logging.info("Filter panel opened successfully")
+            break
         except Exception as e:
             logging.error(f"Failed to click filter button: {e}")
             attemps += 1
@@ -318,9 +321,15 @@ def select_dropdown_item(driver, form, select_item):
 
         try:
             dropdown_button = find_element_with_retry(driver, (By.CSS_SELECTOR, f"ng-select[formcontrolname='{form}']"))
-            click_element_with_retry(driver, dropdown_button)
         except Exception as e:
             logging.error(f"Failed to open dropdown menu: {e}")
+            attempts += 1
+            continue
+
+        try:
+            click_element_with_retry(driver, dropdown_button)
+        except Exception as e:
+            logging.error(f"Failed to click dropdown button: {e}")
             attempts += 1
             continue
 
@@ -333,6 +342,8 @@ def select_dropdown_item(driver, form, select_item):
 
         try:
             click_element_with_retry(driver, select_item_button)
+            logging.info(f"Successfully selected '{select_item}' from dropdown menu")
+            break
         except Exception as e:
             logging.error(f"Failed to click dropdown item: {e}")
             attempts += 1
@@ -353,6 +364,8 @@ def input_item(driver, form, input_item):
 
         try:
             input_element.send_keys(input_item)
+            logging.info(f"Successfully inputted '{input_item}' into form")
+            break
         except Exception as e:
             logging.error(f"Failed to input item: {e}")
             attemp += 1
@@ -684,7 +697,7 @@ def download_pdf(driver, download_directory, filename=None):
 
     logging.error("Failed to download PDF after multiple attempts")
 
-def find_and_download_pdf(driver, filter_form, username, download_directory):
+def find_and_download_pdf(driver, filter_form, username, company_name, download_directory):
     """Find and download PDF."""
     logging.info("Finding and downloading PDF...")
     tax_name = filter_form[0]['item']
@@ -696,7 +709,7 @@ def find_and_download_pdf(driver, filter_form, username, download_directory):
 
     try:
         logging.info("Formatting destination path")
-        destination = [username, tax_year, tax_month]
+        destination = [company_name, tax_year, tax_month]
         destination = "/".join(destination)
         logging.info(f"Destination path formatted successfully: {destination}")
     except Exception as e:
@@ -781,7 +794,7 @@ def find_and_download_pdf(driver, filter_form, username, download_directory):
                 
             try:
                 logging.info("Joining destination to filename")
-                filename = os.path.join(final_directory, get_file_name(driver, filter_form, username, final_directory))
+                filename = os.path.join(final_directory, get_file_name(driver, filter_form, company_name, final_directory))
                 logging.info(f"Filename joined successfully: {filename}")
             except Exception as e:
                 logging.error("Error joining destination to filename: %s", e)
@@ -865,11 +878,28 @@ def switch_to_next_page(driver):
 def logout(driver):
     """Logout from the site."""
     logging.info("Logging out...")
-    driver.quit()
+
+    attemp = 0
+    while attemp < MAX_ATTEMPTS:
+
+        try:
+            driver.quit()
+            logging.info("Logout successful")
+            break
+        except Exception as e:
+            attemp += 1
+            logging.error("Failed to logout: %s", e)
+
 
 # Main controller
-def login_and_download_all_pdfs(username, password, login_url, filter_form, download_directory):
-    driver = login(username, password, login_url)
+def login_and_download_all_pdfs(username, password, company_name, login_url, filter_form, download_directory):
+    
+    try:
+        driver = login(username, password, login_url)
+    except Exception as e:
+        logging.error("Failed to login: %s", e)
+        return
+   
     try:
         navigate_to_pdf_page(driver)
         
@@ -884,7 +914,7 @@ def login_and_download_all_pdfs(username, password, login_url, filter_form, down
             
         # Download pdfs from every items shown in the page
         while True:
-            find_and_download_pdf(driver, filter_form, username, download_directory)
+            find_and_download_pdf(driver, filter_form, username, company_name, download_directory)
             if (not switch_to_next_page(driver)):
                 break
 
@@ -895,6 +925,8 @@ def login_and_download_all_pdfs(username, password, login_url, filter_form, down
 
 def main():
     setup_debug_logging()
+
+    months = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]
 
     accounts = read_credentials_from_excel("credentials.xlsx")
 
@@ -927,25 +959,25 @@ def main():
 
             for year in range(current_year - 2, current_year - 1, current_year):
                 filter_form[1]['item'] = str(year)
-                login_and_download_all_pdfs(account['username'], account['password'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
+                login_and_download_all_pdfs(account['username'], account['password'], account['company_name'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
 
                 if selectMonth == None or selectMonth == "":
 
-                    for month in ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]:
+                    for month in months:
                         filter_form[2]['item'] = month
-                        login_and_download_all_pdfs(account['username'], account['password'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
+                    login_and_download_all_pdfs(account['username'], account['password'], account['company_name'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
 
                 else:
-                    login_and_download_all_pdfs(account['username'], account['password'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
+                    login_and_download_all_pdfs(account['username'], account['password'], account['company_name'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
         
         elif selectMonth == None or selectMonth == "":
 
-            for month in ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]:
+            for month in months:
                 filter_form[2]['item'] = month
-                login_and_download_all_pdfs(account['username'], account['password'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
+                login_and_download_all_pdfs(account['username'], account['password'], account['company_name'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
 
         else:
-            login_and_download_all_pdfs(account['username'], account['password'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
+            login_and_download_all_pdfs(account['username'], account['password'], account['company_name'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
 
 if __name__ == "__main__":
     main()
