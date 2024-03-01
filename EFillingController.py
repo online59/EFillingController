@@ -322,6 +322,7 @@ def select_dropdown_item(driver, form, select_item):
         try:
             dropdown_button = find_element_with_retry(driver, (By.CSS_SELECTOR, f"ng-select[formcontrolname='{form}']"))
         except Exception as e:
+            press_esc_with_retry(driver)
             logging.error(f"Failed to open dropdown menu: {e}")
             attempts += 1
             continue
@@ -329,6 +330,7 @@ def select_dropdown_item(driver, form, select_item):
         try:
             click_element_with_retry(driver, dropdown_button)
         except Exception as e:
+            press_esc_with_retry(driver)
             logging.error(f"Failed to click dropdown button: {e}")
             attempts += 1
             continue
@@ -336,6 +338,7 @@ def select_dropdown_item(driver, form, select_item):
         try:
             select_item_button = find_element_with_retry(driver, (By.XPATH, f"//span[@class='ng-option-label ng-star-inserted' and contains(text(), '{select_item}')]"))
         except Exception as e:
+            press_esc_with_retry(driver)
             logging.error(f"Failed to find selected item from dropdown: {e}")
             attempts += 1
             continue
@@ -345,6 +348,7 @@ def select_dropdown_item(driver, form, select_item):
             logging.info(f"Successfully selected '{select_item}' from dropdown menu")
             break
         except Exception as e:
+            press_esc_with_retry(driver)
             logging.error(f"Failed to click dropdown item: {e}")
             attempts += 1
             continue
@@ -730,6 +734,7 @@ def find_and_download_pdf(driver, filter_form, username, company_name, download_
         try:
             button_elements = find_all_elements_with_retry(driver, (By.XPATH, '//button[@aria-controls="dropdown-basic" and @id="button-basic"]'))
         except Exception as e:
+            press_esc_with_retry(driver)
             logging.error("Failed to find dropdown button: %s", e)
             attempts += 1
             continue
@@ -740,6 +745,7 @@ def find_and_download_pdf(driver, filter_form, username, company_name, download_
         try:
             click_element_with_retry(driver, button_elements[last_clicked_index], fallback_locator=(By.XPATH, '//button[@aria-controls="dropdown-basic" and @id="button-basic"]'), index=last_clicked_index)
         except Exception as e:
+            press_esc_with_retry(driver)
             logging.error("Failed to click on dropdown menu", e)
             attempts += 1
             continue
@@ -747,6 +753,7 @@ def find_and_download_pdf(driver, filter_form, username, company_name, download_
         try:
             dropdown_menu = find_clickable_with_retry(driver, (By.XPATH, '//a[@class="dropdown-item" and contains(text(), "พิมพ์ภาพแบบ/ภาพใบเสร็จ")]'))
         except Exception as e:
+            press_esc_with_retry(driver)
             logging.error("Failed to find dropdown item: %s", e)
             attempts += 1
             continue
@@ -754,6 +761,7 @@ def find_and_download_pdf(driver, filter_form, username, company_name, download_
         try:
             click_element_with_retry(driver, dropdown_menu)
         except Exception as e:
+            press_esc_with_retry(driver)
             logging.error("Failed to click on dropdown item", e)
             attempts += 1
             continue
@@ -761,6 +769,7 @@ def find_and_download_pdf(driver, filter_form, username, company_name, download_
         try:
             download_buttons = find_all_elements_with_retry(driver, (By.XPATH, '//button[contains(text(), "ดาวน์โหลด")]'))
         except Exception as e:
+            press_esc_with_retry(driver)
             logging.error("Failed to find download buttons: %s", e)
             attempts += 1
             continue
