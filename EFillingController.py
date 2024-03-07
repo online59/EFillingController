@@ -696,6 +696,46 @@ def download_pdf(driver, download_directory, filename=None):
     logging.error("Failed to download PDF after multiple attempts")
 
 
+def get_month_index(month):
+    """Get month index."""
+    month_index = {
+        "JAN": 1,
+        "FEB": 2,
+        "MAR": 3,
+        "APR": 4,
+        "MAY": 5,
+        "JUN": 6,
+        "JUL": 7,
+        "AUG": 8,
+        "SEP": 9,
+        "OCT": 10,
+        "NOV": 11,
+        "DEC": 12
+    }
+    return month_index[month]
+
+
+def construct_download_directory(download_directory, company_name, tax_year, tax_month):
+    """Construct download directory."""
+    logging.info("Constructing download directory...")
+    try:
+        logging.info("Formatting destination path")
+        destination = [company_name, f"YEAR {tax_year}", f"{get_month_index(tax_month)}.{tax_month}-{tax_year}"]
+        destination = "/".join(destination)
+        logging.info(f"Destination path formatted successfully: {destination}")
+    except Exception as e:
+        logging.error("Error formatting directory path: %s", e)  # Print specific error message
+
+    try:
+        logging.info("Joining destination folder with download directory")
+        final_directory = os.path.join(download_directory, destination)
+        logging.info(f"Path constructed successfully: {final_directory}")
+    except Exception as e:
+        logging.error("Error joining destination folder: %s", e)  # Print specific error message
+
+    return final_directory
+
+
 def find_and_download_pdf(driver, filter_form, username, company_name, download_directory):
     """Find and download PDF."""
     logging.info("Finding and downloading PDF...")
@@ -706,20 +746,7 @@ def find_and_download_pdf(driver, filter_form, username, company_name, download_
     tax_month = str(convert_thai_month_to_eng(tax_month))
     tax_year = str(convert_thai_year_to_eng(tax_year))
 
-    try:
-        logging.info("Formatting destination path")
-        destination = [company_name, tax_year, tax_month]
-        destination = "/".join(destination)
-        logging.info(f"Destination path formatted successfully: {destination}")
-    except Exception as e:
-        logging.error("Error formatting directory path: %s", e)  # Print specific error message
-
-    try:
-        logging.info("Constructing path to folder for download")
-        final_directory = os.path.join(download_directory, destination)
-        logging.info(f"Path constructed successfully: {final_directory}")
-    except Exception as e:
-        logging.error("Error joining destination folder: %s", e)  # Print specific error message
+    final_directory = construct_download_directory(download_directory, company_name, tax_year, tax_month)
 
     last_clicked_index = 0
     attempts = 0
