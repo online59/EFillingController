@@ -914,59 +914,53 @@ def login_and_download_all_pdfs(username, password, company_name, login_url, fil
 def main():
     setup_debug_logging()
 
-    months = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]
+    # Months in Thai
+    thai_months = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."]
 
+    # Read credentials and filter options from Excel files
     accounts = read_credentials_from_excel("credentials.xlsx")
-
     options = read_filter_options_from_excel("options.xlsx")
 
+    # Set default download directory
     user_download_folder = os.path.join(os.path.expanduser('~'), 'Downloads').replace('\\', '/')
-
     DEFAULT_DOWNLOAD_DIRECTORY = f"{user_download_folder}/EFillingController"
 
     login_url = "https://efiling.rd.go.th/rd-efiling-web/login"
 
-    selectYear = options[0]['tax_year']
-    selectMonth = options[0]['tax_month']
-
-    filter_form = [
-        {'form': 'taxForm', 'item': options[0]['tax_form'], 'type': 'dropdown'},
-        {'form': 'taxYear', 'item': options[0]['tax_year'], 'type': 'dropdown'},
-        {'form': 'taxMonth', 'item': options[0]['tax_month'], 'type': 'dropdown'},
-        {'form': 'nid', 'item': options[0]['tax_id'], 'type': 'input'},
-        {'form': 'fullName', 'item': options[0]['tax_company'], 'type': 'input'},
-        {'form': 'refNo', 'item': options[0]['tax_ref'], 'type': 'input'},
-        {'form': 'taxformStatus', 'item': options[0]['tax_status'], 'type': 'dropdown'},
-    ]
-
     for account in accounts:
+        # Prepare filter form data
+        filter_form = [
+            {'form': 'taxForm', 'item': options[0]['tax_form'], 'type': 'dropdown'},
+            {'form': 'taxYear', 'item': options[0]['tax_year'], 'type': 'dropdown'},
+            {'form': 'taxMonth', 'item': options[0]['tax_month'], 'type': 'dropdown'},
+            {'form': 'nid', 'item': options[0]['tax_id'], 'type': 'input'},
+            {'form': 'fullName', 'item': options[0]['tax_company'], 'type': 'input'},
+            {'form': 'refNo', 'item': options[0]['tax_ref'], 'type': 'input'},
+            {'form': 'taxformStatus', 'item': options[0]['tax_status'], 'type': 'dropdown'},
+        ]
 
-        if selectYear == None or selectYear == "":
-
+        # Check if selectYear and selectMonth are not specified
+        if not options[0]['tax_year'] or not options[0]['tax_month']:
             current_year = datetime.datetime.now().year + 543
-
             for year in range(current_year - 2, current_year - 1, current_year):
                 filter_form[1]['item'] = str(year)
-                login_and_download_all_pdfs(account['username'], account['password'], account['company_name'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
-
-                if selectMonth == None or selectMonth == "":
-
-                    for month in months:
-                        filter_form[2]['item'] = month
+                for month in thai_months:
+                    filter_form[2]['item'] = month
                     login_and_download_all_pdfs(account['username'], account['password'], account['company_name'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
-
-                else:
-                    login_and_download_all_pdfs(account['username'], account['password'], account['company_name'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
-        
-        elif selectMonth == None or selectMonth == "":
-
-            for month in months:
+        # Check if selectYear is not specified
+        elif not options[0]['tax_year']:
+            for month in thai_months:
                 filter_form[2]['item'] = month
                 login_and_download_all_pdfs(account['username'], account['password'], account['company_name'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
-
+        # Check if selectMonth is not specified
+        elif not options[0]['tax_month']:
+            for year in thai_months:
+                filter_form[1]['item'] = year
+                login_and_download_all_pdfs(account['username'], account['password'], account['company_name'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
         else:
             login_and_download_all_pdfs(account['username'], account['password'], account['company_name'], login_url, filter_form, DEFAULT_DOWNLOAD_DIRECTORY)
 
 if __name__ == "__main__":
     main()
+
 
