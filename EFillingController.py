@@ -572,13 +572,23 @@ def get_file_name(driver, filter_form, username, download_directory):
             logging.warning("Cannot extract name from URL or URL not found")
             url_extr = ""
 
+
         # Check if the URL is a TAX_FORM or RECEIPT
         if "RECEIPT" in url_extr:
 
-            base_filename = f"RECEIPT_{tax_month}-{tax_year} {username}.pdf"
+            try:
+                # Extracting tax_name from url_extr
+                tax_name_index = url_extr.index("RECEIPT_") + len("RECEIPT_")
+                tax_name = convert_system_tax_form_to_eng(url_extr[tax_name_index:tax_name_index + 3])
+                logging.info(f"Extracted tax_name from URL: {tax_name}")
+            except ValueError:
+                tax_name = "UNKNOWN"
+                logging.warning("Cannot extract tax_name from URL")
+
+            base_filename = f"RECEIPT_{tax_name} {tax_month}-{tax_year} {username}.pdf"
             logging.info(f"Base filename: {base_filename}")
 
-        elif tax_name == "" or tax_name is None:
+        elif "TAX_FORM" in url_extr:
 
             try:
                 # Extracting tax_name from url_extr
@@ -589,13 +599,7 @@ def get_file_name(driver, filter_form, username, download_directory):
                 tax_name = "UNKNOWN"
                 logging.warning("Cannot extract tax_name from URL")
 
-
             base_filename = f"{tax_name} {tax_month}-{tax_year} {username}.pdf"
-            logging.info(f"Base filename: {base_filename}")
-
-        elif tax_name == "" or tax_name is None and "RECEIPT" not in url_extr:
-
-            base_filename = f"UNKNOWN_{tax_month}-{tax_year} {username}.pdf"
             logging.info(f"Base filename: {base_filename}")
 
         else:
