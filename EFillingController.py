@@ -541,6 +541,27 @@ def convert_thai_year_to_eng(tax_year):
     eng_year = int(tax_year) - 543
     return str(eng_year)
 
+def split_tax_form(tax_form, url_extr):
+    """
+    Split tax form from URL.
+
+    Args:
+        tax_form (str): Tax form from filter form.
+        url_extr (str): Extracted tax form from URL.
+
+    Returns:
+        str: Tax form.
+    """
+    logging.info("Splitting tax form from URL")
+
+    try:
+        tax_name_index = url_extr.index(tax_form) + len(tax_form)
+    except ValueError:
+        logging.warning("Tax form not found in URL")
+        return "UNKNOWN"
+
+    return convert_system_tax_form_to_eng(url_extr[tax_name_index:tax_name_index + 3])
+
 def get_file_name(driver, filter_form, username, download_directory):
     """
     Constructing a file name with the URL.
@@ -556,95 +577,48 @@ def get_file_name(driver, filter_form, username, download_directory):
     """
     try:
         logging.info("Getting download filename...")
+
+        # Extract filter information
         tax_name = filter_form[0]['item']
         tax_year = filter_form[1]['item']
         tax_month = filter_form[2]['item']
 
-        # Convert variables to strings before joining
-        tax_name = str(convert_thai_tax_form_to_eng(tax_name))
-        tax_year = str(convert_thai_year_to_eng(tax_year))
-        tax_month = str(convert_thai_month_to_eng(tax_month)).upper()
+        # Convert Thai filter information to English
+        tax_name = convert_thai_tax_form_to_eng(tax_name)
+        tax_year = convert_thai_year_to_eng(tax_year)
+        tax_month = convert_thai_month_to_eng(tax_month).upper()
 
-        try:
-            current_url = driver.current_url
-            url_extr = current_url.split('/')[-1]  # Extract filename from URL
-        except Exception as e:
-            logging.warning("Cannot extract name from URL or URL not found")
-            url_extr = ""
+        current_url = driver.current_url
+        url_extr = current_url.split('/')[-1]  # Extract filename from URL
 
-
-        # Check if the URL is a TAX_FORM or RECEIPT
+        # Construct base filename
         if "RECEIPT" in url_extr:
-
-            try:
-                # Extracting tax_name from url_extr
-                tax_name_index = url_extr.index("RECEIPT_") + len("RECEIPT_")
-                tax_name = convert_system_tax_form_to_eng(url_extr[tax_name_index:tax_name_index + 3])
-                logging.info(f"Extracted tax_name from URL: {tax_name}")
-            except ValueError:
-                tax_name = "UNKNOWN"
-                logging.warning("Cannot extract tax_name from URL")
-
+            tax_name = split_tax_form("RECEIPT_", url_extr)
             base_filename = f"RECEIPT_{tax_name} {tax_month}-{tax_year} {username}.pdf"
-            logging.info(f"Base filename: {base_filename}")
-
         elif "TAX_FORM" in url_extr:
-
-            try:
-                # Extracting tax_name from url_extr
-                tax_name_index = url_extr.index("TAX_FORM_") + len("TAX_FORM_")
-                tax_name = convert_system_tax_form_to_eng(url_extr[tax_name_index:tax_name_index + 3])
-                logging.info(f"Extracted tax_name from URL: {tax_name}")
-            except ValueError:
-                tax_name = "UNKNOWN"
-                logging.warning("Cannot extract tax_name from URL")
-
+            tax_name = split_tax_form("TAX_FORM_", url_extr)
             base_filename = f"{tax_name} {tax_month}-{tax_year} {username}.pdf"
-            logging.info(f"Base filename: {base_filename}")
-
-
         elif "C02" in url_extr:
-
-            try:
-                # Extracting tax_name from url_extr
-                tax_name_index = url_extr.index("C02_") + len("C02_")
-                tax_name = convert_system_tax_form_to_eng(url_extr[tax_name_index:tax_name_index + 3])
-                logging.info(f"Extracted tax_name from URL: {tax_name}")
-            except ValueError:
-                tax_name = "UNKNOWN"
-                logging.warning("Cannot extract tax_name from URL")
-
+            tax_name = split_tax_form("C02_", url_extr)
             base_filename = f"POR.2 - PENALTY FEE {tax_name} {tax_month}-{tax_year} {username}.pdf"
-            logging.info(f"Base filename: {base_filename}")
-
         else:
-            
             base_filename = f"UNKNOWN_{tax_name} {tax_month}-{tax_year} {username}.pdf"
-            logging.info(f"Base filename: {base_filename}")
-
 
         # Check if the base filename already exists
-        if os.path.exists(os.path.join(download_directory, base_filename)):
+        filename = base_filename
+        index = 1
+        while os.path.exists(os.path.join(download_directory, filename)):
             logging.info("Base filename already exists, finding next available filename...")
-            # Find the next available filename by adding a numbering suffix
-            index = 1
-            while True:
-                numbered_filename = f"{base_filename[:-4]} {index}.pdf"  # Append _{index} before the extension
-                if not os.path.exists(os.path.join(download_directory, numbered_filename)):
-                    filename = numbered_filename
-                    logging.info(f"Numbered filename: {filename}")
-                    break
-                index += 1
-        else:
-            filename = base_filename
-            logging.info(f"Final filename: {filename}")
-        
+            filename = f"{base_filename[:-4]} {index}.pdf"  # Append _{index} before the extension
+            index += 1
+
+        logging.info(f"Final filename: {filename}")
         logging.info("Filename creation successful")
         return filename
     
     except Exception as e:
         logging.error("Error in get_file_name function: %s", e)
-        return ""  # Return empty string or handle the error appropriately
+        return ""
 
 def get_default_download_folder():
     """Retrieve default download folder."""
@@ -720,6 +694,7 @@ def download_pdf(driver, download_directory, filename=None):
         attempt += 1
 
     logging.error("Failed to download PDF after multiple attempts")
+
 
 def find_and_download_pdf(driver, filter_form, username, company_name, download_directory):
     """Find and download PDF."""
