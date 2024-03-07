@@ -21,6 +21,7 @@ import pandas as pd
 # Constants
 MAX_ATTEMPTS = 5
 WAIT_TIMEOUT = 10
+TIME_SLEEP = 2
 
 def read_credentials_from_excel(file_path):
     credentials = []
@@ -740,7 +741,6 @@ def construct_download_directory(download_directory, company_name, tax_year, tax
 
     return final_directory
 
-
 def find_and_download_pdf(driver, filter_form, username, company_name, download_directory):
     """Find and download PDF."""
     logging.info("Finding and downloading PDF...")
@@ -758,46 +758,31 @@ def find_and_download_pdf(driver, filter_form, username, company_name, download_
             
     while attempts < MAX_ATTEMPTS:
 
-        try:
-            button_elements = find_all_elements_with_retry(driver, (By.XPATH, '//button[@aria-controls="dropdown-basic" and @id="button-basic"]'))
-        except Exception as e:
+        button_elements = find_all_elements_with_retry(driver, (By.XPATH, '//button[@aria-controls="dropdown-basic" and @id="button-basic"]'))
+        if not button_elements:
             press_esc_with_retry(driver)
-            logging.error("Failed to find dropdown button: %s", e)
+            logging.error("Failed to find dropdown button")
             attempts += 1
             continue
 
         if last_clicked_index + 1 > len(button_elements):
             break
 
-        try:
-            click_element_with_retry(driver, button_elements[last_clicked_index], fallback_locator=(By.XPATH, '//button[@aria-controls="dropdown-basic" and @id="button-basic"]'), index=last_clicked_index)
-        except Exception as e:
+        click_element_with_retry(driver, button_elements[last_clicked_index], fallback_locator=(By.XPATH, '//button[@aria-controls="dropdown-basic" and @id="button-basic"]'), index=last_clicked_index)
+
+        dropdown_menu = find_clickable_with_retry(driver, (By.XPATH, '//a[@class="dropdown-item" and contains(text(), "พิมพ์ภาพแบบ/ภาพใบเสร็จ")]'))
+        if not dropdown_menu:
             press_esc_with_retry(driver)
-            logging.error("Failed to click on dropdown menu", e)
-            attempts += 1
-            continue
-        
-        try:
-            dropdown_menu = find_clickable_with_retry(driver, (By.XPATH, '//a[@class="dropdown-item" and contains(text(), "พิมพ์ภาพแบบ/ภาพใบเสร็จ")]'))
-        except Exception as e:
-            press_esc_with_retry(driver)
-            logging.error("Failed to find dropdown item: %s", e)
+            logging.error("Failed to find dropdown item")
             attempts += 1
             continue
 
-        try:
-            click_element_with_retry(driver, dropdown_menu)
-        except Exception as e:
-            press_esc_with_retry(driver)
-            logging.error("Failed to click on dropdown item", e)
-            attempts += 1
-            continue
+        click_element_with_retry(driver, dropdown_menu)
 
-        try:
-            download_buttons = find_all_elements_with_retry(driver, (By.XPATH, '//button[contains(text(), "ดาวน์โหลด")]'))
-        except Exception as e:
+        download_buttons = find_all_elements_with_retry(driver, (By.XPATH, '//button[contains(text(), "ดาวน์โหลด")]'))
+        if not download_buttons:
             press_esc_with_retry(driver)
-            logging.error("Failed to find download buttons: %s", e)
+            logging.error("Failed to find download buttons")
             attempts += 1
             continue
 
@@ -814,81 +799,48 @@ def find_and_download_pdf(driver, filter_form, username, company_name, download_
 
             try:
                 click_element_with_retry(driver, download_button)
-            except Exception as e:
-                logging.error("Failed to click on download button", e)
-                click_button_attempts += 1
-                continue
-
-            try:
                 logging.info("Switching to new tab")
                 tabs = driver.window_handles
                 driver.switch_to.window(tabs[-1])
-            except Exception as e:
-                logging.error("Error switching to new tab: %s", e)
-                click_button_attempts += 1
-                continue
-                
-            try:
                 logging.info("Joining destination to filename")
                 filename = os.path.join(final_directory, get_file_name(driver, filter_form, company_name, final_directory, max_button, button_counter))
                 logging.info(f"Filename joined successfully: {filename}")
-            except Exception as e:
-                logging.error("Error joining destination to filename: %s", e)
-                click_button_attempts += 1
-                continue
-            
-            try:
                 download_pdf(driver, final_directory, filename=filename)
             except Exception as e:
-                logging.error("Error downloading PDF: %s", e)
+                logging.error("Error during PDF download process: %s", e)
                 click_button_attempts += 1
-                driver.close() # Close the tab
+                driver.close()  # Close the tab
                 continue
+            finally:
+                try:
+                    driver.close()
+                    driver.switch_to.window(tabs[0])
+                except Exception as e:
+                    logging.error("Error closing or switching tab: %s", e)
+                    click_button_attempts += 1
+                    continue
 
-            try:
-                driver.close()
-            except Exception as e:
-                logging.error("Error closing tab: %s", e)
-                click_button_attempts += 1
-                continue
-
-            try:
-                driver.switch_to.window(tabs[0])
-            except Exception as e:
-                logging.error("Error switching to original tab: %s", e)
-                click_button_attempts += 1
-                continue
-            
             button_counter += 1
 
-        try:
-            close_button = find_clickable_with_retry(driver, (By.XPATH, '//button[contains(@class, "btn button-box button-box-close-modal") and contains(text(), "ปิด")]'))
-        except Exception as e:
-            logging.error("Failed to find close button: %s", e)
-            
+        close_button = find_clickable_with_retry(driver, (By.XPATH, '//button[contains(@class, "btn button-box button-box-close-modal") and contains(text(), "ปิด")]'))
+        if not close_button:
+            logging.error("Failed to find close button")
+            press_esc_with_retry(driver)
             logging.info("Trying to press ESC key")
-            try:
-                press_esc_with_retry(driver)
-            except Exception as e:
-                logging.error("Failed to press ESC key: %s", e)
-                return
-
+            attempts += 1
+            continue
 
         try:
             click_element_with_retry(driver, close_button)
         except Exception as e:
-            logging.error("Failed to click on close button")
-            
+            logging.error("Failed to click on close button: %s", e)
+            press_esc_with_retry(driver)
             logging.info("Trying to press ESC key")
-            try:
-                press_esc_with_retry(driver)
-            except Exception as e:
-                logging.error("Failed to press ESC key: %s", e)
-                return
+            attempts += 1
+            continue
 
         logging.info(f"Current button click counting: {last_clicked_index}")
-
-        last_clicked_index += 1   
+        last_clicked_index += 1
 
 def switch_to_next_page(driver):
     """Switch to the next page in the same URL."""
