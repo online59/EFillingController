@@ -19,7 +19,7 @@ import numpy as np
 import pandas as pd
 
 # Constants
-MAX_ATTEMPTS = 3
+MAX_ATTEMPTS = 5
 WAIT_TIMEOUT = 10
 
 def read_credentials_from_excel(file_path):
@@ -562,7 +562,7 @@ def split_tax_form(tax_form, url_extr):
 
     return convert_system_tax_form_to_eng(url_extr[tax_name_index:tax_name_index + 3])
 
-def get_file_name(driver, filter_form, username, download_directory):
+def get_file_name(driver, filter_form, username, download_directory, max_button, button_counter):
     """
     Constructing a file name with the URL.
 
@@ -594,7 +594,12 @@ def get_file_name(driver, filter_form, username, download_directory):
         # Construct base filename
         if "RECEIPT" in url_extr:
             tax_name = split_tax_form("RECEIPT_", url_extr)
-            base_filename = f"RECEIPT_{tax_name} {tax_month}-{tax_year} {username}.pdf"
+
+            if max_button > 3 and button_counter == 2:
+                base_filename = f"RECEIPT_POR.2 - PENALTY FEE {tax_name} {tax_month}-{tax_year} {username}.pdf"
+            else:
+                base_filename = f"RECEIPT_{tax_name} {tax_month}-{tax_year} {username}.pdf"
+
         elif "TAX_FORM" in url_extr:
             tax_name = split_tax_form("TAX_FORM_", url_extr)
             base_filename = f"{tax_name} {tax_month}-{tax_year} {username}.pdf"
@@ -825,7 +830,7 @@ def find_and_download_pdf(driver, filter_form, username, company_name, download_
                 
             try:
                 logging.info("Joining destination to filename")
-                filename = os.path.join(final_directory, get_file_name(driver, filter_form, company_name, final_directory))
+                filename = os.path.join(final_directory, get_file_name(driver, filter_form, company_name, final_directory, max_button, button_counter))
                 logging.info(f"Filename joined successfully: {filename}")
             except Exception as e:
                 logging.error("Error joining destination to filename: %s", e)

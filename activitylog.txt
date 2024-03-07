@@ -1,731 +1,154 @@
-2024-03-07 21:55:23,762 - INFO - Logging in...
-2024-03-07 21:55:23,762 - INFO - ====== WebDriver manager ======
-2024-03-07 21:55:24,881 - INFO - Get LATEST chromedriver version for google-chrome
-2024-03-07 21:55:25,560 - INFO - Get LATEST chromedriver version for google-chrome
-2024-03-07 21:55:26,172 - INFO - Driver [C:\Users\Se_sA\.wdm\drivers\chromedriver\win64\122.0.6261.94\chromedriver-win32/chromedriver.exe] found in cache
-2024-03-07 21:55:36,088 - INFO - Login successful
-2024-03-07 21:55:36,088 - INFO - Navigating to all tax form page...
-2024-03-07 21:55:36,089 - INFO - Function: <bound method WebDriver.get of <selenium.webdriver.chrome.webdriver.WebDriver (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:55:37,835 - INFO - Opening filter panel, attempt 1...
-2024-03-07 21:55:37,835 - INFO - Finding element with retry
-2024-03-07 21:55:37,835 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:55:37,866 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.103")>
-2024-03-07 21:55:38,002 - INFO - Click successful on attempt 1
-2024-03-07 21:55:38,002 - INFO - Filter panel opened successfully
-2024-03-07 21:55:38,002 - INFO - Filling filter form...
-2024-03-07 21:55:38,002 - INFO - Selecting '2566' from dropdown menu, attempt 1...
-2024-03-07 21:55:38,002 - INFO - Finding element with retry
-2024-03-07 21:55:38,003 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:55:38,034 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.157")>
-2024-03-07 21:55:38,086 - INFO - Click successful on attempt 1
-2024-03-07 21:55:38,086 - INFO - Finding element with retry
-2024-03-07 21:55:38,086 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:55:38,114 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.158")>
-2024-03-07 21:55:38,161 - INFO - Click successful on attempt 1
-2024-03-07 21:55:38,161 - INFO - Successfully selected '2566' from dropdown menu
-2024-03-07 21:55:38,161 - INFO - Selecting 'Á.¤.' from dropdown menu, attempt 1...
-2024-03-07 21:55:38,161 - INFO - Finding element with retry
-2024-03-07 21:55:38,161 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:55:38,187 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.159")>
-2024-03-07 21:55:38,235 - INFO - Click successful on attempt 1
-2024-03-07 21:55:38,235 - INFO - Finding element with retry
-2024-03-07 21:55:38,235 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:55:38,261 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.160")>
-2024-03-07 21:55:38,301 - INFO - Click successful on attempt 1
-2024-03-07 21:55:38,302 - INFO - Successfully selected 'Á.¤.' from dropdown menu
-2024-03-07 21:55:38,302 - INFO - Finding element with retry
-2024-03-07 21:55:38,302 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:55:38,324 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.161")>
-2024-03-07 21:55:38,373 - INFO - Click successful on attempt 1
-2024-03-07 21:55:40,374 - INFO - Finding and downloading PDF...
-2024-03-07 21:55:40,374 - INFO - Converting Thai's month into Eng
-2024-03-07 21:55:40,374 - INFO - Converting Thai's month into Eng
-2024-03-07 21:55:40,375 - INFO - Converting Thai year to English year
-2024-03-07 21:55:40,375 - INFO - Constructing download directory...
-2024-03-07 21:55:40,375 - INFO - Formatting destination path
-2024-03-07 21:55:40,376 - INFO - Destination path formatted successfully: KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:55:40,376 - INFO - Joining destination folder with download directory
-2024-03-07 21:55:40,376 - INFO - Path constructed successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:55:40,376 - INFO - Finding all elements with retry
-2024-03-07 21:55:40,377 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:55:40,432 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.177")>
-2024-03-07 21:55:40,497 - INFO - Click successful on attempt 1
-2024-03-07 21:55:40,497 - INFO - Finding clickable element with retry
-2024-03-07 21:55:40,497 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:55:40,534 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.182")>
-2024-03-07 21:55:40,594 - INFO - Click successful on attempt 1
-2024-03-07 21:55:40,595 - INFO - Finding all elements with retry
-2024-03-07 21:55:40,595 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:55:43,255 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.196")>
-2024-03-07 21:55:43,333 - INFO - Click successful on attempt 1
-2024-03-07 21:55:43,333 - INFO - Switching to new tab
-2024-03-07 21:55:43,347 - INFO - Joining destination to filename
-2024-03-07 21:55:43,347 - INFO - Getting download filename...
-2024-03-07 21:55:43,347 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:55:43,347 - INFO - Converting Thai year to English year
-2024-03-07 21:55:43,348 - INFO - Converting Thai's month into Eng
-2024-03-07 21:55:43,348 - INFO - Converting Thai's month into Eng
-2024-03-07 21:55:44,445 - INFO - Splitting tax form from URL
-2024-03-07 21:55:44,445 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:55:44,445 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:55:44,445 - INFO - Final filename: PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:55:44,445 - INFO - Filename creation successful
-2024-03-07 21:55:44,446 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:55:44,446 - INFO - Attemp downloading PDF...
-2024-03-07 21:55:44,446 - INFO - Download PDF on 1 attempt
-2024-03-07 21:55:44,453 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:55:44,454 - INFO - Destination directory created successfully
-2024-03-07 21:55:44,454 - INFO - Join file name with OS path
-2024-03-07 21:55:44,454 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:55:44,455 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:56:04,740 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:04,806 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.197")>
-2024-03-07 21:56:04,907 - INFO - Click successful on attempt 1
-2024-03-07 21:56:04,907 - INFO - Switching to new tab
-2024-03-07 21:56:04,916 - INFO - Joining destination to filename
-2024-03-07 21:56:04,916 - INFO - Getting download filename...
-2024-03-07 21:56:04,916 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:04,916 - INFO - Converting Thai year to English year
-2024-03-07 21:56:04,916 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:04,916 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:06,343 - INFO - Splitting tax form from URL
-2024-03-07 21:56:06,343 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:06,343 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:06,343 - INFO - Final filename: RECEIPT_PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:06,343 - INFO - Filename creation successful
-2024-03-07 21:56:06,343 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:06,343 - INFO - Attemp downloading PDF...
-2024-03-07 21:56:06,343 - INFO - Download PDF on 1 attempt
-2024-03-07 21:56:06,348 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:56:06,349 - INFO - Destination directory created successfully
-2024-03-07 21:56:06,349 - INFO - Join file name with OS path
-2024-03-07 21:56:06,349 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:06,349 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:56:08,688 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:08,746 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.198")>
-2024-03-07 21:56:08,827 - INFO - Click successful on attempt 1
-2024-03-07 21:56:08,827 - INFO - Switching to new tab
-2024-03-07 21:56:08,845 - INFO - Joining destination to filename
-2024-03-07 21:56:08,845 - INFO - Getting download filename...
-2024-03-07 21:56:08,845 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:08,845 - INFO - Converting Thai year to English year
-2024-03-07 21:56:08,845 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:08,846 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:09,149 - INFO - Splitting tax form from URL
-2024-03-07 21:56:09,149 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:09,149 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:09,149 - INFO - Base filename already exists, finding next available filename...
-2024-03-07 21:56:09,149 - INFO - Final filename: RECEIPT_PP36 JAN-2023 KUL_SOLUTION 1.pdf
-2024-03-07 21:56:09,149 - INFO - Filename creation successful
-2024-03-07 21:56:09,150 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION 1.pdf
-2024-03-07 21:56:09,150 - INFO - Attemp downloading PDF...
-2024-03-07 21:56:09,150 - INFO - Download PDF on 1 attempt
-2024-03-07 21:56:09,156 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:56:09,156 - INFO - Destination directory created successfully
-2024-03-07 21:56:09,156 - INFO - Join file name with OS path
-2024-03-07 21:56:09,156 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION 1.pdf
-2024-03-07 21:56:09,156 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:56:10,534 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION 1.pdf
-2024-03-07 21:56:10,564 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.199")>
-2024-03-07 21:56:10,647 - INFO - Click successful on attempt 1
-2024-03-07 21:56:10,647 - INFO - Switching to new tab
-2024-03-07 21:56:10,659 - INFO - Joining destination to filename
-2024-03-07 21:56:10,659 - INFO - Getting download filename...
-2024-03-07 21:56:10,660 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:10,660 - INFO - Converting Thai year to English year
-2024-03-07 21:56:10,660 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:10,660 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:11,376 - INFO - Splitting tax form from URL
-2024-03-07 21:56:11,376 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:11,376 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:11,376 - INFO - Final filename: POR.2 - PENALTY FEE PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:11,376 - INFO - Filename creation successful
-2024-03-07 21:56:11,376 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\POR.2 - PENALTY FEE PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:11,376 - INFO - Attemp downloading PDF...
-2024-03-07 21:56:11,376 - INFO - Download PDF on 1 attempt
-2024-03-07 21:56:11,383 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:56:11,384 - INFO - Destination directory created successfully
-2024-03-07 21:56:11,384 - INFO - Join file name with OS path
-2024-03-07 21:56:11,384 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\POR.2 - PENALTY FEE PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:11,384 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:56:15,824 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\POR.2 - PENALTY FEE PP36 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:15,888 - INFO - Finding clickable element with retry
-2024-03-07 21:56:15,888 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:15,925 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.213")>
-2024-03-07 21:56:15,967 - INFO - Click successful on attempt 1
-2024-03-07 21:56:15,968 - INFO - Current button click counting: 0
-2024-03-07 21:56:15,968 - INFO - Finding all elements with retry
-2024-03-07 21:56:15,968 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:16,606 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.224")>
-2024-03-07 21:56:16,661 - INFO - Click successful on attempt 1
-2024-03-07 21:56:16,662 - INFO - Finding clickable element with retry
-2024-03-07 21:56:16,662 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:16,697 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.227")>
-2024-03-07 21:56:16,736 - INFO - Click successful on attempt 1
-2024-03-07 21:56:16,737 - INFO - Finding all elements with retry
-2024-03-07 21:56:16,737 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:18,876 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.229")>
-2024-03-07 21:56:18,933 - INFO - Click successful on attempt 1
-2024-03-07 21:56:18,933 - INFO - Switching to new tab
-2024-03-07 21:56:18,944 - INFO - Joining destination to filename
-2024-03-07 21:56:18,944 - INFO - Getting download filename...
-2024-03-07 21:56:18,944 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:18,945 - INFO - Converting Thai year to English year
-2024-03-07 21:56:18,945 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:18,945 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:19,140 - INFO - Splitting tax form from URL
-2024-03-07 21:56:19,140 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:19,140 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:19,140 - INFO - Final filename: PP30 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:19,140 - INFO - Filename creation successful
-2024-03-07 21:56:19,140 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PP30 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:19,141 - INFO - Attemp downloading PDF...
-2024-03-07 21:56:19,141 - INFO - Download PDF on 1 attempt
-2024-03-07 21:56:19,148 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:56:19,149 - INFO - Destination directory created successfully
-2024-03-07 21:56:19,149 - INFO - Join file name with OS path
-2024-03-07 21:56:19,149 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PP30 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:19,149 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:56:19,881 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PP30 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:19,914 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.230")>
-2024-03-07 21:56:19,984 - INFO - Click successful on attempt 1
-2024-03-07 21:56:19,984 - INFO - Switching to new tab
-2024-03-07 21:56:20,000 - INFO - Joining destination to filename
-2024-03-07 21:56:20,000 - INFO - Getting download filename...
-2024-03-07 21:56:20,000 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:20,000 - INFO - Converting Thai year to English year
-2024-03-07 21:56:20,000 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:20,000 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:20,215 - INFO - Splitting tax form from URL
-2024-03-07 21:56:20,216 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:20,216 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:20,216 - INFO - Final filename: RECEIPT_PP30 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:20,216 - INFO - Filename creation successful
-2024-03-07 21:56:20,216 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP30 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:20,216 - INFO - Attemp downloading PDF...
-2024-03-07 21:56:20,216 - INFO - Download PDF on 1 attempt
-2024-03-07 21:56:20,224 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:56:20,224 - INFO - Destination directory created successfully
-2024-03-07 21:56:20,224 - INFO - Join file name with OS path
-2024-03-07 21:56:20,225 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP30 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:20,225 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:56:21,100 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP30 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:21,171 - INFO - Finding clickable element with retry
-2024-03-07 21:56:21,171 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:21,200 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.213")>
-2024-03-07 21:56:21,248 - INFO - Click successful on attempt 1
-2024-03-07 21:56:21,248 - INFO - Current button click counting: 1
-2024-03-07 21:56:21,248 - INFO - Finding all elements with retry
-2024-03-07 21:56:21,248 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:21,856 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.249")>
-2024-03-07 21:56:21,899 - INFO - Click successful on attempt 1
-2024-03-07 21:56:21,899 - INFO - Finding clickable element with retry
-2024-03-07 21:56:21,899 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:21,936 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.251")>
-2024-03-07 21:56:21,975 - INFO - Click successful on attempt 1
-2024-03-07 21:56:21,975 - INFO - Finding all elements with retry
-2024-03-07 21:56:21,975 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:24,114 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.253")>
-2024-03-07 21:56:24,171 - INFO - Click successful on attempt 1
-2024-03-07 21:56:24,171 - INFO - Switching to new tab
-2024-03-07 21:56:24,184 - INFO - Joining destination to filename
-2024-03-07 21:56:24,184 - INFO - Getting download filename...
-2024-03-07 21:56:24,184 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:24,184 - INFO - Converting Thai year to English year
-2024-03-07 21:56:24,184 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:24,184 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:24,409 - INFO - Splitting tax form from URL
-2024-03-07 21:56:24,410 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:24,410 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:24,410 - INFO - Final filename: PND3 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:24,410 - INFO - Filename creation successful
-2024-03-07 21:56:24,410 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PND3 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:24,410 - INFO - Attemp downloading PDF...
-2024-03-07 21:56:24,410 - INFO - Download PDF on 1 attempt
-2024-03-07 21:56:24,416 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:56:24,416 - INFO - Destination directory created successfully
-2024-03-07 21:56:24,416 - INFO - Join file name with OS path
-2024-03-07 21:56:24,416 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PND3 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:24,416 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:56:25,716 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PND3 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:25,781 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.254")>
-2024-03-07 21:56:25,928 - INFO - Click successful on attempt 1
-2024-03-07 21:56:25,928 - INFO - Switching to new tab
-2024-03-07 21:56:25,954 - INFO - Joining destination to filename
-2024-03-07 21:56:25,954 - INFO - Getting download filename...
-2024-03-07 21:56:25,954 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:25,955 - INFO - Converting Thai year to English year
-2024-03-07 21:56:25,955 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:25,955 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:26,168 - INFO - Splitting tax form from URL
-2024-03-07 21:56:26,168 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:26,168 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:26,168 - INFO - Final filename: RECEIPT_PND3 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:26,168 - INFO - Filename creation successful
-2024-03-07 21:56:26,168 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PND3 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:26,168 - INFO - Attemp downloading PDF...
-2024-03-07 21:56:26,168 - INFO - Download PDF on 1 attempt
-2024-03-07 21:56:26,173 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:56:26,173 - INFO - Destination directory created successfully
-2024-03-07 21:56:26,173 - INFO - Join file name with OS path
-2024-03-07 21:56:26,173 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PND3 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:26,173 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:56:26,918 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PND3 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:26,996 - INFO - Finding clickable element with retry
-2024-03-07 21:56:26,997 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:27,063 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.213")>
-2024-03-07 21:56:27,109 - INFO - Click successful on attempt 1
-2024-03-07 21:56:27,109 - INFO - Current button click counting: 2
-2024-03-07 21:56:27,109 - INFO - Finding all elements with retry
-2024-03-07 21:56:27,109 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:27,834 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.274")>
-2024-03-07 21:56:27,912 - INFO - Click successful on attempt 1
-2024-03-07 21:56:27,912 - INFO - Finding clickable element with retry
-2024-03-07 21:56:27,913 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:27,953 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.275")>
-2024-03-07 21:56:28,000 - INFO - Click successful on attempt 1
-2024-03-07 21:56:28,000 - INFO - Finding all elements with retry
-2024-03-07 21:56:28,000 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:30,118 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.279")>
-2024-03-07 21:56:30,195 - INFO - Click successful on attempt 1
-2024-03-07 21:56:30,195 - INFO - Switching to new tab
-2024-03-07 21:56:30,224 - INFO - Joining destination to filename
-2024-03-07 21:56:30,225 - INFO - Getting download filename...
-2024-03-07 21:56:30,225 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:30,225 - INFO - Converting Thai year to English year
-2024-03-07 21:56:30,225 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:30,225 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:30,422 - INFO - Splitting tax form from URL
-2024-03-07 21:56:30,423 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:30,423 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:30,423 - INFO - Final filename: PND1 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:30,424 - INFO - Filename creation successful
-2024-03-07 21:56:30,424 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PND1 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:30,424 - INFO - Attemp downloading PDF...
-2024-03-07 21:56:30,424 - INFO - Download PDF on 1 attempt
-2024-03-07 21:56:30,433 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:56:30,433 - INFO - Destination directory created successfully
-2024-03-07 21:56:30,433 - INFO - Join file name with OS path
-2024-03-07 21:56:30,433 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PND1 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:30,433 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:56:31,263 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PND1 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:31,309 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.280")>
-2024-03-07 21:56:31,423 - INFO - Click successful on attempt 1
-2024-03-07 21:56:31,423 - INFO - Switching to new tab
-2024-03-07 21:56:31,438 - INFO - Joining destination to filename
-2024-03-07 21:56:31,438 - INFO - Getting download filename...
-2024-03-07 21:56:31,438 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:31,438 - INFO - Converting Thai year to English year
-2024-03-07 21:56:31,439 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:31,439 - INFO - Converting Thai's month into Eng
-2024-03-07 21:56:31,650 - INFO - Splitting tax form from URL
-2024-03-07 21:56:31,650 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:31,650 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:56:31,650 - INFO - Final filename: RECEIPT_PND1 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:31,650 - INFO - Filename creation successful
-2024-03-07 21:56:31,650 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PND1 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:31,650 - INFO - Attemp downloading PDF...
-2024-03-07 21:56:31,651 - INFO - Download PDF on 1 attempt
-2024-03-07 21:56:31,660 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
-2024-03-07 21:56:31,661 - INFO - Destination directory created successfully
-2024-03-07 21:56:31,661 - INFO - Join file name with OS path
-2024-03-07 21:56:31,661 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PND1 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:31,661 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:56:32,442 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PND1 JAN-2023 KUL_SOLUTION.pdf
-2024-03-07 21:56:32,564 - INFO - Finding clickable element with retry
-2024-03-07 21:56:32,565 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:32,615 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="4b0a5d4f514e829a82404ea0e723e074", element="f.023B45400974EA3C178DA3A4C826BAB7.d.98C807E5CC1D587C97DFBA5910D06C59.e.213")>
-2024-03-07 21:56:32,661 - INFO - Click successful on attempt 1
-2024-03-07 21:56:32,661 - INFO - Current button click counting: 3
-2024-03-07 21:56:32,661 - INFO - Finding all elements with retry
-2024-03-07 21:56:32,662 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:32,777 - INFO - Switching to next page...
-2024-03-07 21:56:32,777 - INFO - Finding clickable element with retry
-2024-03-07 21:56:32,777 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="4b0a5d4f514e829a82404ea0e723e074")>> performing
-2024-03-07 21:56:33,371 - INFO - No more pages to switch to
-2024-03-07 21:56:38,372 - INFO - Logging out...
-2024-03-07 21:56:40,613 - INFO - Logout successful
-2024-03-07 21:56:44,667 - INFO - Logging in...
-2024-03-07 21:56:44,668 - INFO - ====== WebDriver manager ======
-2024-03-07 21:56:45,577 - INFO - Get LATEST chromedriver version for google-chrome
-2024-03-07 21:56:46,411 - INFO - Get LATEST chromedriver version for google-chrome
-2024-03-07 21:56:47,194 - INFO - Driver [C:\Users\Se_sA\.wdm\drivers\chromedriver\win64\122.0.6261.94\chromedriver-win32/chromedriver.exe] found in cache
-2024-03-07 21:57:03,517 - INFO - Login successful
-2024-03-07 21:57:03,517 - INFO - Navigating to all tax form page...
-2024-03-07 21:57:03,517 - INFO - Function: <bound method WebDriver.get of <selenium.webdriver.chrome.webdriver.WebDriver (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:04,435 - INFO - Opening filter panel, attempt 1...
-2024-03-07 21:57:04,436 - INFO - Finding element with retry
-2024-03-07 21:57:04,436 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:04,473 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.120")>
-2024-03-07 21:57:04,570 - INFO - Click successful on attempt 1
-2024-03-07 21:57:04,570 - INFO - Filter panel opened successfully
-2024-03-07 21:57:04,570 - INFO - Filling filter form...
-2024-03-07 21:57:04,570 - INFO - Selecting '2566' from dropdown menu, attempt 1...
-2024-03-07 21:57:04,570 - INFO - Finding element with retry
-2024-03-07 21:57:04,570 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:04,601 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.144")>
-2024-03-07 21:57:04,652 - INFO - Click successful on attempt 1
-2024-03-07 21:57:04,652 - INFO - Finding element with retry
-2024-03-07 21:57:04,652 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:04,677 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.178")>
-2024-03-07 21:57:04,723 - INFO - Click successful on attempt 1
-2024-03-07 21:57:04,723 - INFO - Successfully selected '2566' from dropdown menu
-2024-03-07 21:57:04,723 - INFO - Selecting 'Á.¤.' from dropdown menu, attempt 1...
-2024-03-07 21:57:04,723 - INFO - Finding element with retry
-2024-03-07 21:57:04,724 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:04,748 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.179")>
-2024-03-07 21:57:04,797 - INFO - Click successful on attempt 1
-2024-03-07 21:57:04,798 - INFO - Finding element with retry
-2024-03-07 21:57:04,798 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:04,821 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.180")>
-2024-03-07 21:57:04,868 - INFO - Click successful on attempt 1
-2024-03-07 21:57:04,868 - INFO - Successfully selected 'Á.¤.' from dropdown menu
-2024-03-07 21:57:04,868 - INFO - Finding element with retry
-2024-03-07 21:57:04,868 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:04,893 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.181")>
-2024-03-07 21:57:04,942 - INFO - Click successful on attempt 1
-2024-03-07 21:57:06,943 - INFO - Finding and downloading PDF...
-2024-03-07 21:57:06,943 - INFO - Converting Thai's month into Eng
-2024-03-07 21:57:06,943 - INFO - Converting Thai's month into Eng
-2024-03-07 21:57:06,943 - INFO - Converting Thai year to English year
-2024-03-07 21:57:06,943 - INFO - Constructing download directory...
-2024-03-07 21:57:06,943 - INFO - Formatting destination path
-2024-03-07 21:57:06,943 - INFO - Destination path formatted successfully: ADAY_MARGETING/YEAR 2023/1.JAN-2023
-2024-03-07 21:57:06,943 - INFO - Joining destination folder with download directory
-2024-03-07 21:57:06,943 - INFO - Path constructed successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023
-2024-03-07 21:57:06,943 - INFO - Finding all elements with retry
-2024-03-07 21:57:06,943 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:06,998 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.194")>
-2024-03-07 21:57:07,069 - INFO - Click successful on attempt 1
-2024-03-07 21:57:07,069 - INFO - Finding clickable element with retry
-2024-03-07 21:57:07,069 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:07,112 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.199")>
-2024-03-07 21:57:07,169 - INFO - Click successful on attempt 1
-2024-03-07 21:57:07,169 - INFO - Finding all elements with retry
-2024-03-07 21:57:07,169 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:09,306 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.214")>
-2024-03-07 21:57:09,373 - INFO - Click successful on attempt 1
-2024-03-07 21:57:09,373 - INFO - Switching to new tab
-2024-03-07 21:57:09,385 - INFO - Joining destination to filename
-2024-03-07 21:57:09,385 - INFO - Getting download filename...
-2024-03-07 21:57:09,385 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:09,385 - INFO - Converting Thai year to English year
-2024-03-07 21:57:09,385 - INFO - Converting Thai's month into Eng
-2024-03-07 21:57:09,385 - INFO - Converting Thai's month into Eng
-2024-03-07 21:57:10,067 - INFO - Splitting tax form from URL
-2024-03-07 21:57:10,067 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:10,067 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:10,067 - INFO - Final filename: PP30 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:10,067 - INFO - Filename creation successful
-2024-03-07 21:57:10,067 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PP30 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:10,067 - INFO - Attemp downloading PDF...
-2024-03-07 21:57:10,067 - INFO - Download PDF on 1 attempt
-2024-03-07 21:57:10,073 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023
-2024-03-07 21:57:10,074 - INFO - Destination directory created successfully
-2024-03-07 21:57:10,074 - INFO - Join file name with OS path
-2024-03-07 21:57:10,074 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PP30 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:10,074 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:57:16,540 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PP30 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:16,582 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.215")>
-2024-03-07 21:57:16,661 - INFO - Click successful on attempt 1
-2024-03-07 21:57:16,661 - INFO - Switching to new tab
-2024-03-07 21:57:16,668 - INFO - Joining destination to filename
-2024-03-07 21:57:16,668 - INFO - Getting download filename...
-2024-03-07 21:57:16,668 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:16,669 - INFO - Converting Thai year to English year
-2024-03-07 21:57:16,669 - INFO - Converting Thai's month into Eng
-2024-03-07 21:57:16,669 - INFO - Converting Thai's month into Eng
-2024-03-07 21:57:17,305 - INFO - Splitting tax form from URL
-2024-03-07 21:57:17,306 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:17,306 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:17,306 - INFO - Final filename: RECEIPT_PP30 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:17,306 - INFO - Filename creation successful
-2024-03-07 21:57:17,306 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PP30 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:17,306 - INFO - Attemp downloading PDF...
-2024-03-07 21:57:17,307 - INFO - Download PDF on 1 attempt
-2024-03-07 21:57:17,313 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023
-2024-03-07 21:57:17,313 - INFO - Destination directory created successfully
-2024-03-07 21:57:17,313 - INFO - Join file name with OS path
-2024-03-07 21:57:17,313 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PP30 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:17,314 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:57:23,336 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PP30 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:23,387 - INFO - Finding clickable element with retry
-2024-03-07 21:57:23,387 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:23,444 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.222")>
-2024-03-07 21:57:23,490 - INFO - Click successful on attempt 1
-2024-03-07 21:57:23,491 - INFO - Current button click counting: 0
-2024-03-07 21:57:23,491 - INFO - Finding all elements with retry
-2024-03-07 21:57:23,491 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:24,107 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.195")>
-2024-03-07 21:57:24,159 - INFO - Click successful on attempt 1
-2024-03-07 21:57:24,159 - INFO - Finding clickable element with retry
-2024-03-07 21:57:24,159 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:34,553 - WARNING - Encountered exception: Message: 
-Stacktrace:
-	GetHandleVerifier [0x00C88C93+51395]
-	(No symbol) [0x00BF5EF1]
-	(No symbol) [0x00AAE13A]
-	(No symbol) [0x00AE62BB]
-	(No symbol) [0x00AE63EB]
-	(No symbol) [0x00B1C162]
-	(No symbol) [0x00B03ED4]
-	(No symbol) [0x00B1A570]
-	(No symbol) [0x00B03C26]
-	(No symbol) [0x00ADC629]
-	(No symbol) [0x00ADD40D]
-	GetHandleVerifier [0x01006453+3711107]
-	GetHandleVerifier [0x0104583A+3970154]
-	GetHandleVerifier [0x01040B28+3950424]
-	GetHandleVerifier [0x00D39C99+776393]
-	(No symbol) [0x00C016C4]
-	(No symbol) [0x00BFC5A8]
-	(No symbol) [0x00BFC759]
-	(No symbol) [0x00BEDD80]
-	BaseThreadInitThunk [0x75A97BA9+25]
-	RtlInitializeExceptionChain [0x7707BD2B+107]
-	RtlClearBits [0x7707BCAF+191]
-, retrying...
-2024-03-07 21:57:34,553 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:44,999 - WARNING - Encountered exception: Message: 
-Stacktrace:
-	GetHandleVerifier [0x00C88C93+51395]
-	(No symbol) [0x00BF5EF1]
-	(No symbol) [0x00AAE13A]
-	(No symbol) [0x00AE62BB]
-	(No symbol) [0x00AE63EB]
-	(No symbol) [0x00B1C162]
-	(No symbol) [0x00B03ED4]
-	(No symbol) [0x00B1A570]
-	(No symbol) [0x00B03C26]
-	(No symbol) [0x00ADC629]
-	(No symbol) [0x00ADD40D]
-	GetHandleVerifier [0x01006453+3711107]
-	GetHandleVerifier [0x0104583A+3970154]
-	GetHandleVerifier [0x01040B28+3950424]
-	GetHandleVerifier [0x00D39C99+776393]
-	(No symbol) [0x00C016C4]
-	(No symbol) [0x00BFC5A8]
-	(No symbol) [0x00BFC759]
-	(No symbol) [0x00BEDD80]
-	BaseThreadInitThunk [0x75A97BA9+25]
-	RtlInitializeExceptionChain [0x7707BD2B+107]
-	RtlClearBits [0x7707BCAF+191]
-, retrying...
-2024-03-07 21:57:44,999 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:55,437 - WARNING - Encountered exception: Message: 
-Stacktrace:
-	GetHandleVerifier [0x00C88C93+51395]
-	(No symbol) [0x00BF5EF1]
-	(No symbol) [0x00AAE13A]
-	(No symbol) [0x00AE62BB]
-	(No symbol) [0x00AE63EB]
-	(No symbol) [0x00B1C162]
-	(No symbol) [0x00B03ED4]
-	(No symbol) [0x00B1A570]
-	(No symbol) [0x00B03C26]
-	(No symbol) [0x00ADC629]
-	(No symbol) [0x00ADD40D]
-	GetHandleVerifier [0x01006453+3711107]
-	GetHandleVerifier [0x0104583A+3970154]
-	GetHandleVerifier [0x01040B28+3950424]
-	GetHandleVerifier [0x00D39C99+776393]
-	(No symbol) [0x00C016C4]
-	(No symbol) [0x00BFC5A8]
-	(No symbol) [0x00BFC759]
-	(No symbol) [0x00BEDD80]
-	BaseThreadInitThunk [0x75A97BA9+25]
-	RtlInitializeExceptionChain [0x7707BD2B+107]
-	RtlClearBits [0x7707BCAF+191]
-, retrying...
-2024-03-07 21:57:55,454 - ERROR - Failed to find dropdown item: Function failed after multiple attempts
-2024-03-07 21:57:55,455 - INFO - Finding all elements with retry
-2024-03-07 21:57:55,455 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:55,500 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.238")>
-2024-03-07 21:57:55,539 - INFO - Click successful on attempt 1
-2024-03-07 21:57:55,539 - INFO - Finding clickable element with retry
-2024-03-07 21:57:55,539 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:55,567 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.241")>
-2024-03-07 21:57:55,623 - INFO - Click successful on attempt 1
-2024-03-07 21:57:55,623 - INFO - Finding all elements with retry
-2024-03-07 21:57:55,623 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:57:57,783 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.245")>
-2024-03-07 21:57:57,846 - INFO - Click successful on attempt 1
-2024-03-07 21:57:57,846 - INFO - Switching to new tab
-2024-03-07 21:57:57,858 - INFO - Joining destination to filename
-2024-03-07 21:57:57,858 - INFO - Getting download filename...
-2024-03-07 21:57:57,859 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:57,859 - INFO - Converting Thai year to English year
-2024-03-07 21:57:57,859 - INFO - Converting Thai's month into Eng
-2024-03-07 21:57:57,860 - INFO - Converting Thai's month into Eng
-2024-03-07 21:57:58,053 - INFO - Splitting tax form from URL
-2024-03-07 21:57:58,053 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:58,053 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:58,053 - INFO - Final filename: PND53 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:58,053 - INFO - Filename creation successful
-2024-03-07 21:57:58,053 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PND53 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:58,053 - INFO - Attemp downloading PDF...
-2024-03-07 21:57:58,053 - INFO - Download PDF on 1 attempt
-2024-03-07 21:57:58,060 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023
-2024-03-07 21:57:58,061 - INFO - Destination directory created successfully
-2024-03-07 21:57:58,061 - INFO - Join file name with OS path
-2024-03-07 21:57:58,061 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PND53 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:58,061 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:57:58,791 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PND53 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:58,821 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.246")>
-2024-03-07 21:57:58,896 - INFO - Click successful on attempt 1
-2024-03-07 21:57:58,896 - INFO - Switching to new tab
-2024-03-07 21:57:58,913 - INFO - Joining destination to filename
-2024-03-07 21:57:58,913 - INFO - Getting download filename...
-2024-03-07 21:57:58,913 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:58,913 - INFO - Converting Thai year to English year
-2024-03-07 21:57:58,913 - INFO - Converting Thai's month into Eng
-2024-03-07 21:57:58,913 - INFO - Converting Thai's month into Eng
-2024-03-07 21:57:59,369 - INFO - Splitting tax form from URL
-2024-03-07 21:57:59,369 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:59,369 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:57:59,369 - INFO - Final filename: RECEIPT_PND53 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:59,369 - INFO - Filename creation successful
-2024-03-07 21:57:59,369 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PND53 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:59,369 - INFO - Attemp downloading PDF...
-2024-03-07 21:57:59,369 - INFO - Download PDF on 1 attempt
-2024-03-07 21:57:59,378 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023
-2024-03-07 21:57:59,378 - INFO - Destination directory created successfully
-2024-03-07 21:57:59,378 - INFO - Join file name with OS path
-2024-03-07 21:57:59,378 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PND53 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:57:59,378 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:58:01,470 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PND53 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:01,502 - INFO - Finding clickable element with retry
-2024-03-07 21:58:01,503 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:58:01,541 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.222")>
-2024-03-07 21:58:01,575 - INFO - Click successful on attempt 1
-2024-03-07 21:58:01,575 - INFO - Current button click counting: 1
-2024-03-07 21:58:01,575 - INFO - Finding all elements with retry
-2024-03-07 21:58:01,576 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:58:02,177 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.265")>
-2024-03-07 21:58:02,226 - INFO - Click successful on attempt 1
-2024-03-07 21:58:02,230 - INFO - Finding clickable element with retry
-2024-03-07 21:58:02,230 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:58:02,261 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.267")>
-2024-03-07 21:58:02,297 - INFO - Click successful on attempt 1
-2024-03-07 21:58:02,297 - INFO - Finding all elements with retry
-2024-03-07 21:58:02,297 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:58:04,419 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.269")>
-2024-03-07 21:58:04,484 - INFO - Click successful on attempt 1
-2024-03-07 21:58:04,484 - INFO - Switching to new tab
-2024-03-07 21:58:04,498 - INFO - Joining destination to filename
-2024-03-07 21:58:04,498 - INFO - Getting download filename...
-2024-03-07 21:58:04,498 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:04,498 - INFO - Converting Thai year to English year
-2024-03-07 21:58:04,498 - INFO - Converting Thai's month into Eng
-2024-03-07 21:58:04,498 - INFO - Converting Thai's month into Eng
-2024-03-07 21:58:04,726 - INFO - Splitting tax form from URL
-2024-03-07 21:58:04,727 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:04,727 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:04,728 - INFO - Final filename: PP36 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:04,728 - INFO - Filename creation successful
-2024-03-07 21:58:04,728 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PP36 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:04,728 - INFO - Attemp downloading PDF...
-2024-03-07 21:58:04,728 - INFO - Download PDF on 1 attempt
-2024-03-07 21:58:04,733 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023
-2024-03-07 21:58:04,734 - INFO - Destination directory created successfully
-2024-03-07 21:58:04,734 - INFO - Join file name with OS path
-2024-03-07 21:58:04,734 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PP36 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:04,734 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:58:05,819 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PP36 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:05,854 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.270")>
-2024-03-07 21:58:05,946 - INFO - Click successful on attempt 1
-2024-03-07 21:58:05,946 - INFO - Switching to new tab
-2024-03-07 21:58:05,962 - INFO - Joining destination to filename
-2024-03-07 21:58:05,962 - INFO - Getting download filename...
-2024-03-07 21:58:05,962 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:05,962 - INFO - Converting Thai year to English year
-2024-03-07 21:58:05,962 - INFO - Converting Thai's month into Eng
-2024-03-07 21:58:05,963 - INFO - Converting Thai's month into Eng
-2024-03-07 21:58:06,176 - INFO - Splitting tax form from URL
-2024-03-07 21:58:06,176 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:06,176 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:06,177 - INFO - Final filename: RECEIPT_PP36 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:06,177 - INFO - Filename creation successful
-2024-03-07 21:58:06,177 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:06,177 - INFO - Attemp downloading PDF...
-2024-03-07 21:58:06,177 - INFO - Download PDF on 1 attempt
-2024-03-07 21:58:06,183 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023
-2024-03-07 21:58:06,183 - INFO - Destination directory created successfully
-2024-03-07 21:58:06,183 - INFO - Join file name with OS path
-2024-03-07 21:58:06,183 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:06,183 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:58:07,165 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:07,194 - INFO - Finding clickable element with retry
-2024-03-07 21:58:07,194 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:58:07,232 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.222")>
-2024-03-07 21:58:07,270 - INFO - Click successful on attempt 1
-2024-03-07 21:58:07,270 - INFO - Current button click counting: 2
-2024-03-07 21:58:07,270 - INFO - Finding all elements with retry
-2024-03-07 21:58:07,270 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:58:07,893 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.291")>
-2024-03-07 21:58:07,937 - INFO - Click successful on attempt 1
-2024-03-07 21:58:07,937 - INFO - Finding clickable element with retry
-2024-03-07 21:58:07,937 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:58:07,967 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.292")>
-2024-03-07 21:58:08,012 - INFO - Click successful on attempt 1
-2024-03-07 21:58:08,012 - INFO - Finding all elements with retry
-2024-03-07 21:58:08,012 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:58:10,146 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.295")>
-2024-03-07 21:58:10,215 - INFO - Click successful on attempt 1
-2024-03-07 21:58:10,215 - INFO - Switching to new tab
-2024-03-07 21:58:10,226 - INFO - Joining destination to filename
-2024-03-07 21:58:10,226 - INFO - Getting download filename...
-2024-03-07 21:58:10,226 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:10,226 - INFO - Converting Thai year to English year
-2024-03-07 21:58:10,227 - INFO - Converting Thai's month into Eng
-2024-03-07 21:58:10,227 - INFO - Converting Thai's month into Eng
-2024-03-07 21:58:10,438 - INFO - Splitting tax form from URL
-2024-03-07 21:58:10,438 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:10,438 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:10,438 - INFO - Final filename: PND1 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:10,439 - INFO - Filename creation successful
-2024-03-07 21:58:10,439 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PND1 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:10,439 - INFO - Attemp downloading PDF...
-2024-03-07 21:58:10,439 - INFO - Download PDF on 1 attempt
-2024-03-07 21:58:10,445 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023
-2024-03-07 21:58:10,445 - INFO - Destination directory created successfully
-2024-03-07 21:58:10,445 - INFO - Join file name with OS path
-2024-03-07 21:58:10,445 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PND1 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:10,446 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:58:12,546 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\PND1 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:12,596 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.296")>
-2024-03-07 21:58:12,670 - INFO - Click successful on attempt 1
-2024-03-07 21:58:12,670 - INFO - Switching to new tab
-2024-03-07 21:58:12,679 - INFO - Joining destination to filename
-2024-03-07 21:58:12,679 - INFO - Getting download filename...
-2024-03-07 21:58:12,679 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:12,679 - INFO - Converting Thai year to English year
-2024-03-07 21:58:12,679 - INFO - Converting Thai's month into Eng
-2024-03-07 21:58:12,679 - INFO - Converting Thai's month into Eng
-2024-03-07 21:58:12,898 - INFO - Splitting tax form from URL
-2024-03-07 21:58:12,898 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:12,899 - INFO - Converting Thai's tax form into Eng
-2024-03-07 21:58:12,899 - INFO - Final filename: RECEIPT_PND1 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:12,899 - INFO - Filename creation successful
-2024-03-07 21:58:12,899 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PND1 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:12,899 - INFO - Attemp downloading PDF...
-2024-03-07 21:58:12,899 - INFO - Download PDF on 1 attempt
-2024-03-07 21:58:12,906 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023
-2024-03-07 21:58:12,906 - INFO - Destination directory created successfully
-2024-03-07 21:58:12,906 - INFO - Join file name with OS path
-2024-03-07 21:58:12,906 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PND1 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:12,906 - INFO - Retrieve PDF URL for downloading
-2024-03-07 21:58:13,651 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\ADAY_MARGETING/YEAR 2023/1.JAN-2023\RECEIPT_PND1 JAN-2023 ADAY_MARGETING.pdf
-2024-03-07 21:58:13,708 - INFO - Finding clickable element with retry
-2024-03-07 21:58:13,708 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:58:13,737 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="b051f7e80663a70b2dce88b975e52e3d", element="f.0205E09EF7B9D0D6C7D3A85358E66A4A.d.C76392D0A5ABE4E3F4166813EE8533DB.e.222")>
-2024-03-07 21:58:13,774 - INFO - Click successful on attempt 1
-2024-03-07 21:58:13,774 - INFO - Current button click counting: 3
-2024-03-07 21:58:13,774 - INFO - Finding all elements with retry
-2024-03-07 21:58:13,774 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:58:13,840 - INFO - Switching to next page...
-2024-03-07 21:58:13,840 - INFO - Finding clickable element with retry
-2024-03-07 21:58:13,840 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="b051f7e80663a70b2dce88b975e52e3d")>> performing
-2024-03-07 21:58:14,412 - INFO - No more pages to switch to
-2024-03-07 21:58:19,413 - INFO - Logging out...
-2024-03-07 21:58:21,625 - INFO - Logout successful
+2024-03-07 22:23:54,041 - INFO - Logging in...
+2024-03-07 22:23:54,042 - INFO - ====== WebDriver manager ======
+2024-03-07 22:23:54,924 - INFO - Get LATEST chromedriver version for google-chrome
+2024-03-07 22:23:55,595 - INFO - Get LATEST chromedriver version for google-chrome
+2024-03-07 22:23:56,203 - INFO - Driver [C:\Users\Se_sA\.wdm\drivers\chromedriver\win64\122.0.6261.94\chromedriver-win32/chromedriver.exe] found in cache
+2024-03-07 22:24:08,454 - INFO - Login successful
+2024-03-07 22:24:08,454 - INFO - Navigating to all tax form page...
+2024-03-07 22:24:08,454 - INFO - Function: <bound method WebDriver.get of <selenium.webdriver.chrome.webdriver.WebDriver (session="906bddaa9f8c9f10840ea667f97f80a1")>> performing
+2024-03-07 22:24:09,568 - INFO - Opening filter panel, attempt 1...
+2024-03-07 22:24:09,568 - INFO - Finding element with retry
+2024-03-07 22:24:09,568 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="906bddaa9f8c9f10840ea667f97f80a1")>> performing
+2024-03-07 22:24:09,603 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.137")>
+2024-03-07 22:24:09,663 - INFO - Click successful on attempt 1
+2024-03-07 22:24:09,663 - INFO - Filter panel opened successfully
+2024-03-07 22:24:09,663 - INFO - Filling filter form...
+2024-03-07 22:24:09,663 - INFO - Selecting '2566' from dropdown menu, attempt 1...
+2024-03-07 22:24:09,664 - INFO - Finding element with retry
+2024-03-07 22:24:09,664 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="906bddaa9f8c9f10840ea667f97f80a1")>> performing
+2024-03-07 22:24:09,693 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.179")>
+2024-03-07 22:24:09,741 - INFO - Click successful on attempt 1
+2024-03-07 22:24:09,741 - INFO - Finding element with retry
+2024-03-07 22:24:09,742 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="906bddaa9f8c9f10840ea667f97f80a1")>> performing
+2024-03-07 22:24:09,768 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.193")>
+2024-03-07 22:24:09,814 - INFO - Click successful on attempt 1
+2024-03-07 22:24:09,814 - INFO - Successfully selected '2566' from dropdown menu
+2024-03-07 22:24:09,814 - INFO - Selecting 'Á.¤.' from dropdown menu, attempt 1...
+2024-03-07 22:24:09,814 - INFO - Finding element with retry
+2024-03-07 22:24:09,814 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="906bddaa9f8c9f10840ea667f97f80a1")>> performing
+2024-03-07 22:24:09,837 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.194")>
+2024-03-07 22:24:09,886 - INFO - Click successful on attempt 1
+2024-03-07 22:24:09,886 - INFO - Finding element with retry
+2024-03-07 22:24:09,887 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="906bddaa9f8c9f10840ea667f97f80a1")>> performing
+2024-03-07 22:24:09,911 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.195")>
+2024-03-07 22:24:09,951 - INFO - Click successful on attempt 1
+2024-03-07 22:24:09,951 - INFO - Successfully selected 'Á.¤.' from dropdown menu
+2024-03-07 22:24:09,952 - INFO - Finding element with retry
+2024-03-07 22:24:09,952 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="906bddaa9f8c9f10840ea667f97f80a1")>> performing
+2024-03-07 22:24:09,975 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.196")>
+2024-03-07 22:24:10,019 - INFO - Click successful on attempt 1
+2024-03-07 22:24:12,020 - INFO - Finding and downloading PDF...
+2024-03-07 22:24:12,020 - INFO - Converting Thai's month into Eng
+2024-03-07 22:24:12,020 - INFO - Converting Thai's month into Eng
+2024-03-07 22:24:12,020 - INFO - Converting Thai year to English year
+2024-03-07 22:24:12,020 - INFO - Constructing download directory...
+2024-03-07 22:24:12,020 - INFO - Formatting destination path
+2024-03-07 22:24:12,020 - INFO - Destination path formatted successfully: KUL_SOLUTION/YEAR 2023/1.JAN-2023
+2024-03-07 22:24:12,020 - INFO - Joining destination folder with download directory
+2024-03-07 22:24:12,020 - INFO - Path constructed successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
+2024-03-07 22:24:12,020 - INFO - Finding all elements with retry
+2024-03-07 22:24:12,020 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="906bddaa9f8c9f10840ea667f97f80a1")>> performing
+2024-03-07 22:24:12,083 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.207")>
+2024-03-07 22:24:12,146 - INFO - Click successful on attempt 1
+2024-03-07 22:24:12,147 - INFO - Finding clickable element with retry
+2024-03-07 22:24:12,147 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="906bddaa9f8c9f10840ea667f97f80a1")>> performing
+2024-03-07 22:24:12,189 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.212")>
+2024-03-07 22:24:12,251 - INFO - Click successful on attempt 1
+2024-03-07 22:24:12,251 - INFO - Finding all elements with retry
+2024-03-07 22:24:12,251 - INFO - Function: <bound method WebDriverWait.until of <selenium.webdriver.support.wait.WebDriverWait (session="906bddaa9f8c9f10840ea667f97f80a1")>> performing
+2024-03-07 22:24:15,944 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.227")>
+2024-03-07 22:24:16,006 - INFO - Click successful on attempt 1
+2024-03-07 22:24:16,006 - INFO - Switching to new tab
+2024-03-07 22:24:16,018 - INFO - Joining destination to filename
+2024-03-07 22:24:16,018 - INFO - Getting download filename...
+2024-03-07 22:24:16,018 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:16,018 - INFO - Converting Thai year to English year
+2024-03-07 22:24:16,018 - INFO - Converting Thai's month into Eng
+2024-03-07 22:24:16,018 - INFO - Converting Thai's month into Eng
+2024-03-07 22:24:16,282 - INFO - Splitting tax form from URL
+2024-03-07 22:24:16,282 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:16,282 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:16,282 - INFO - Final filename: PP36 JAN-2023 KUL_SOLUTION.pdf
+2024-03-07 22:24:16,282 - INFO - Filename creation successful
+2024-03-07 22:24:16,282 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PP36 JAN-2023 KUL_SOLUTION.pdf
+2024-03-07 22:24:16,282 - INFO - Attemp downloading PDF...
+2024-03-07 22:24:16,282 - INFO - Download PDF on 1 attempt
+2024-03-07 22:24:16,287 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
+2024-03-07 22:24:16,288 - INFO - Destination directory created successfully
+2024-03-07 22:24:16,288 - INFO - Join file name with OS path
+2024-03-07 22:24:16,288 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PP36 JAN-2023 KUL_SOLUTION.pdf
+2024-03-07 22:24:16,288 - INFO - Retrieve PDF URL for downloading
+2024-03-07 22:24:19,952 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\PP36 JAN-2023 KUL_SOLUTION.pdf
+2024-03-07 22:24:19,985 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.228")>
+2024-03-07 22:24:20,064 - INFO - Click successful on attempt 1
+2024-03-07 22:24:20,064 - INFO - Switching to new tab
+2024-03-07 22:24:20,074 - INFO - Joining destination to filename
+2024-03-07 22:24:20,074 - INFO - Getting download filename...
+2024-03-07 22:24:20,075 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:20,075 - INFO - Converting Thai year to English year
+2024-03-07 22:24:20,076 - INFO - Converting Thai's month into Eng
+2024-03-07 22:24:20,076 - INFO - Converting Thai's month into Eng
+2024-03-07 22:24:20,807 - INFO - Splitting tax form from URL
+2024-03-07 22:24:20,807 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:20,807 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:20,808 - INFO - Final filename: RECEIPT_PP36 JAN-2023 KUL_SOLUTION.pdf
+2024-03-07 22:24:20,808 - INFO - Filename creation successful
+2024-03-07 22:24:20,808 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION.pdf
+2024-03-07 22:24:20,808 - INFO - Attemp downloading PDF...
+2024-03-07 22:24:20,808 - INFO - Download PDF on 1 attempt
+2024-03-07 22:24:20,814 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
+2024-03-07 22:24:20,814 - INFO - Destination directory created successfully
+2024-03-07 22:24:20,814 - INFO - Join file name with OS path
+2024-03-07 22:24:20,814 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION.pdf
+2024-03-07 22:24:20,814 - INFO - Retrieve PDF URL for downloading
+2024-03-07 22:24:23,290 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION.pdf
+2024-03-07 22:24:23,340 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.229")>
+2024-03-07 22:24:23,431 - INFO - Click successful on attempt 1
+2024-03-07 22:24:23,431 - INFO - Switching to new tab
+2024-03-07 22:24:23,448 - INFO - Joining destination to filename
+2024-03-07 22:24:23,448 - INFO - Getting download filename...
+2024-03-07 22:24:23,448 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:23,448 - INFO - Converting Thai year to English year
+2024-03-07 22:24:23,448 - INFO - Converting Thai's month into Eng
+2024-03-07 22:24:23,448 - INFO - Converting Thai's month into Eng
+2024-03-07 22:24:23,678 - INFO - Splitting tax form from URL
+2024-03-07 22:24:23,678 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:23,678 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:23,679 - INFO - Final filename: RECEIPT_PP36 JAN-2023 KUL_SOLUTION ADDITIONAL_1.pdf
+2024-03-07 22:24:23,679 - INFO - Filename creation successful
+2024-03-07 22:24:23,679 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION ADDITIONAL_1.pdf
+2024-03-07 22:24:23,679 - INFO - Attemp downloading PDF...
+2024-03-07 22:24:23,679 - INFO - Download PDF on 1 attempt
+2024-03-07 22:24:23,687 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
+2024-03-07 22:24:23,688 - INFO - Destination directory created successfully
+2024-03-07 22:24:23,688 - INFO - Join file name with OS path
+2024-03-07 22:24:23,688 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION ADDITIONAL_1.pdf
+2024-03-07 22:24:23,688 - INFO - Retrieve PDF URL for downloading
+2024-03-07 22:24:27,568 - INFO - PDF downloaded successfully to: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\RECEIPT_PP36 JAN-2023 KUL_SOLUTION ADDITIONAL_1.pdf
+2024-03-07 22:24:27,621 - INFO - Attempt 1: Clicking on <selenium.webdriver.remote.webelement.WebElement (session="906bddaa9f8c9f10840ea667f97f80a1", element="f.656C0FB706F99421E5A456EEB4EDD72B.d.8450484FD683BE8E2FD4FAD0E6F04246.e.230")>
+2024-03-07 22:24:27,794 - INFO - Click successful on attempt 1
+2024-03-07 22:24:27,795 - INFO - Switching to new tab
+2024-03-07 22:24:27,817 - INFO - Joining destination to filename
+2024-03-07 22:24:27,817 - INFO - Getting download filename...
+2024-03-07 22:24:27,817 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:27,817 - INFO - Converting Thai year to English year
+2024-03-07 22:24:27,817 - INFO - Converting Thai's month into Eng
+2024-03-07 22:24:27,817 - INFO - Converting Thai's month into Eng
+2024-03-07 22:24:28,142 - INFO - Splitting tax form from URL
+2024-03-07 22:24:28,142 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:28,142 - INFO - Converting Thai's tax form into Eng
+2024-03-07 22:24:28,143 - INFO - Final filename: POR.2 - PENALTY FEE PP36 JAN-2023 KUL_SOLUTION.pdf
+2024-03-07 22:24:28,143 - INFO - Filename creation successful
+2024-03-07 22:24:28,144 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\POR.2 - PENALTY FEE PP36 JAN-2023 KUL_SOLUTION.pdf
+2024-03-07 22:24:28,144 - INFO - Attemp downloading PDF...
+2024-03-07 22:24:28,144 - INFO - Download PDF on 1 attempt
+2024-03-07 22:24:28,157 - INFO - Creating destination directory at: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023
+2024-03-07 22:24:28,158 - INFO - Destination directory created successfully
+2024-03-07 22:24:28,159 - INFO - Join file name with OS path
+2024-03-07 22:24:28,159 - INFO - Filename joined successfully: C:/Users/Se_sA/Downloads/EFillingController\KUL_SOLUTION/YEAR 2023/1.JAN-2023\POR.2 - PENALTY FEE PP36 JAN-2023 KUL_SOLUTION.pdf
+2024-03-07 22:24:28,159 - INFO - Retrieve PDF URL for downloading
+2024-03-07 22:24:34,332 - INFO - Logging out...
+2024-03-07 22:24:38,411 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000249F53F5400>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/906bddaa9f8c9f10840ea667f97f80a1
+2024-03-07 22:24:42,498 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000249F53F53A0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/906bddaa9f8c9f10840ea667f97f80a1
+2024-03-07 22:24:46,575 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000249F53F5BE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/906bddaa9f8c9f10840ea667f97f80a1
+2024-03-07 22:24:54,700 - INFO - Logout successful
